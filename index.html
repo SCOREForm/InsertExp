@@ -73,71 +73,68 @@
           <p style="font-size: 18px;"><strong>Select Core Services</strong></p>
           <table style="width:100%">
             <tr>
-              <th>Services</th>
-              <th>Expertise Level</th>
+              <th class="firstCol">Services</th>
+              <th class="secondCol">Enter Number of Jobs</th>
+              <th class="thirdCol">Expertise Level 
+                <div class="tooltip">&#x1F6C8;
+                  <span class="tooltiptext">Please enter the Number of jobs to see results for Expertise Level</span>
+                </div>
+              </th>
             </tr>
             <tr>
-              <td id="serCore1"><input type="checkbox" id="core1" name="Winch Control" value="Winch Control" disabled
-                  onclick="handlecCre1(this)">
-                <label for="core1"> Winch Control</label><br>
+              <td>
+              <Span>Winch Control</Span>
               </td>
               <td>
-                <input type="radio" id="coreInt1" name="core1" value="Intermediate" disabled>
-                <label for="coreInt1">Intermediate</label>
-                <input type="radio" id="coreAdv1" name="core1" value="Advanced" disabled>
-                <label for="coreAdv1">Advance</label>
-                <input type="radio" id="coreExp1" name="core1" value="Expert" disabled>
-                <label for="coreExp1">Expert</label>
-              </td>
-            </tr>
-            <tr>
-              <td id="serCore2"><input type="checkbox" id="core2" name="Units" value="Units" disabled
-                  onclick="handlecCre2(this)">
-                <label for="core2"> Units</label><br>
+                <input type="number" id="winchText" name="fname" style="border: 1px black solid" value=" " class="expInput" onchange="core1Cal()">
               </td>
               <td>
-                <input type="radio" id="coreInt2" name="core2" value="Intermediate" disabled>
-                <label for="coreInt2">Intermediate</label>
-                <input type="radio" id="coreAdv2" name="core2" value="Advanced" disabled>
-                <label for="coreAdv2">Advance</label>
-                <input type="radio" id="coreExp2" name="core2" value="Expert" disabled>
-                <label for="coreExp2">Expert</label>
+                <Span id="crInt1" style="display: none;">Intermediate</Span>
+                <Span id="crAdv1" style="display: none;">Advance</Span>		
+                <Span id="crExp1" style="display: none;">Expert</Span>	             
               </td>
             </tr>
             <tr>
-              <td id="serCore3"><input type="checkbox" id="core3" name="Rig Up" value="Rig Up" disabled
-                  onclick="handlecCre3(this)">
-                <label for="core3"> Rig Up</label><br>
+              <td ><Span>Units</Span>
               </td>
               <td>
-                <input type="radio" id="coreInt3" name="core3" value="Intermediate" disabled>
-                <label for="coreInt3">Intermediate</label>
-                <input type="radio" id="coreAdv3" name="core3" value="Advanced" disabled>
-                <label for="coreAdv3">Advance</label>
-                <input type="radio" id="coreExp3" name="core3" value="Expert" disabled>
-                <label for="coreExp3">Expert</label>
+                <input type="number" id="unitsText" name="fname" style="border: 1px black solid" value=" " class="expInput" onchange="core2Cal()" >
+              </td>
+              <td>
+                <Span id="crInt2" style="display: none;">Intermediate</Span>
+                <Span id="crAdv2" style="display: none;">Advance</Span>		
+                <Span id="crExp2" style="display: none;">Expert</Span>	             
               </td>
             </tr>
             <tr>
-              <td id="serCore4"><input type="checkbox" id="core4" name="Basic Equipment" value="Basic Equipment"
-                  disabled onclick="handlecCre4(this)">
-                <label for="core4"> Basic Equipment</label><br>
+              <td ><Span>Rig Up</Span>
               </td>
               <td>
-                <input type="radio" id="coreInt4" name="core4" value="Intermediate" disabled>
-                <label for="coreInt4">Intermediate</label>
-                <input type="radio" id="coreAdv4" name="core4" value="Advanced" disabled>
-                <label for="coreAdv4">Advance</label>
-                <input type="radio" id="coreExp4" name="core4" value="Expert" disabled>
-                <label for="coreExp4">Expert</label>
+                <input type="number" id="rigUpText" name="fname" style="border: 1px black solid" value=" " class="expInput" onchange="core3Cal()" >
+              </td>
+              <td>
+                <Span id="crInt3" style="display: none;">Intermediate</Span>
+                <Span id="crAdv3" style="display: none;">Advance</Span>		
+                <Span id="crExp3" style="display: none;">Expert</Span>	          
+              </td>
+            </tr>
+            <tr>
+              <td ><Span>Basic Equipment</Span>
+              </td>
+              <td>
+                <input type="number" id="basicText" name="fname" style="border: 1px black solid" value=" " class="expInput" onchange="core4Cal()">
+              </td>
+              <td>
+                <Span id="crInt4" style="display: none;">Intermediate</Span>
+                <Span id="crAdv4" style="display: none;">Advance</Span>		
+                <Span id="crExp4" style="display: none;">Expert</Span>	             
               </td>
             </tr>
           </table>
         </form>
         <div id="stickyBottomCore">
-          <span class="alerts">*Minimum 3 required</span><br>
-          <button id="clearCore" type="button" onclick="clearRadioButtonscore(),clearcheckcore()"> Clear
-            Selection</button>
+          <span class="alerts">*User can enter only numeric values</span><br>
+          <button id="clearCore" type="button" onclick="clearCore()"> Clear Values</button>
         </div>
       </Div>
 
@@ -146,49 +143,51 @@
           <p style="font-size: 18px;"><strong>Select WL Specific Safety Services</strong></p>
           <table style="width:100%">
             <tr>
-              <th>Services</th>
-              <th>Expertise Level</th>
+              <th class="firstCol">Services</th>
+              <th class="secondCol">Enter Number of Jobs</th>
+              <th class="thirdCol">Expertise Level 
+                <div class="tooltip">&#x1F6C8;
+                  <span class="tooltiptext">Please enter the Number of jobs to see results for Expertise Level</span>
+                </div>
+              </th>
             </tr>
             <tr>
-              <td id="serWl1"><input type="checkbox" id="wl1" name="Radiation" value="Radiation" disabled
-                  onclick="handleWl1(this)">
-                <label for="wl1"> Radiation</label><br>
+              <td>
+              <Span>Radiation</Span>
               </td>
               <td>
-                <input type="radio" id="wlInt1" name="wl1" value="Intermediate" disabled>
-                <label for="wlInt1">Intermediate</label>
-                <input type="radio" id="wlAdv1" name="wl1" value="Advanced" disabled>
-                <label for="wlAdv1">Advance</label>
-                <input type="radio" id="wlExp1" name="wl1" value="Expert" disabled>
-                <label for="wlExp1">Expert</label>
-              </td>
-            </tr>
-            <tr>
-              <td id="serWl2"><input type="checkbox" id="wl2" name="Explosives" value="Explosives" disabled
-                  onclick="handleWl2(this)">
-                <label for="wl2"> Explosives</label><br>
+                <input type="number" id="radiationText" name="fname" style="border: 1px black solid" value=" " class="expInput" onchange="wl1Cal()">
               </td>
               <td>
-                <input type="radio" id="wlInt2" name="wl2" value="Intermediate" disabled>
-                <label for="wlInt2">Intermediate</label>
-                <input type="radio" id="wlAdv2" name="wl2" value="Advanced" disabled>
-                <label for="wlAdv2">Advance</label>
-                <input type="radio" id="wlExp2" name="wl2" value="Expert" disabled>
-                <label for="wlExp2">Expert</label>
+                <Span id="wlInt1" style="display: none;">Intermediate</Span>
+                <Span id="wlAdv1" style="display: none;">Advance</Span>		
+                <Span id="wlExp1" style="display: none;">Expert</Span>	             
               </td>
             </tr>
             <tr>
-              <td id="serWl3"><input type="checkbox" id="wl3" name="Pressure Control" value="Pressure Control" disabled
-                  onclick="handleWl3(this)">
-                <label for="wl3"> Pressure Control</label><br>
+              <td>
+              <Span>Radiation</Span>
               </td>
               <td>
-                <input type="radio" id="wlInt3" name="wl3" value="Intermediate" disabled>
-                <label for="wlInt3">Intermediate</label>
-                <input type="radio" id="wlAdv3" name="wl3" value="Advanced" disabled>
-                <label for="wlAdv3">Advance</label>
-                <input type="radio" id="wlExp3" name="wl3" value="Expert" disabled>
-                <label for="wlExp3">Expert</label>
+                <input type="number" id="ExplosivesText" name="fname" style="border: 1px black solid" value=" " class="expInput" onchange="wl2Cal()">
+              </td>
+              <td>
+                <Span id="wlInt2" style="display: none;">Intermediate</Span>
+                <Span id="wlAdv2" style="display: none;">Advance</Span>		
+                <Span id="wlExp2" style="display: none;">Expert</Span>	             
+              </td>
+            </tr>
+            <tr>
+              <td>
+              <Span>Pressure Control</Span>
+              </td>
+              <td>
+                <input type="number" id="controlText" name="fname" style="border: 1px black solid" value=" " class="expInput" onchange="wl3Cal()">
+              </td>
+              <td>
+                <Span id="wlInt3" style="display: none;">Intermediate</Span>
+                <Span id="wlAdv3" style="display: none;">Advance</Span>		
+                <Span id="wlExp3" style="display: none;">Expert</Span>	             
               </td>
             </tr>
             <!-- <tr>
@@ -206,8 +205,8 @@
           </table>
         </form>
         <div id="stickyBottomWl">
-          <span class="alerts">*Minimum 1 required</span><br>
-          <button id="clearWl" type="button" onclick="clearRadioButtonswl(),clearcheckwl()"> Clear Selection</button>
+          <span class="alerts">*User can enter only numeric values</span><br>
+          <button id="clearWl" type="button" onclick="clearWl()"> Clear Values</button>
         </div>
       </Div>
 
@@ -218,252 +217,243 @@
           </div>
           <table style="width:100%">
             <tr>
-              <th>Services</th>
-              <th>Expertise Level</th>
+              <th class="firstCol">Services</th>
+              <th class="secondCol">Enter Number of Jobs</th>
+              <th class="thirdCol">Expertise Level 
+                <div class="tooltip">&#x1F6C8;
+                  <span class="tooltiptext">Please enter the Number of jobs to see results for Expertise Level</span>
+                </div>
+              </th>
             </tr>
             <tr>
-              <td id="sercom1"><input type="checkbox" id="com1" name="Acoustics" value="Acoustics" disabled
-                  onclick="handleCom1(this)">
-                <label for="com1"> Acoustics</label><br>
+              <td>
+              <Span>Acoustics</Span>
               </td>
               <td>
-                <input type="radio" id="comInt1" name="com1" value="Intermediate" disabled>
-                <label for="comInt1">Intermediate</label>
-                <input type="radio" id="comAdv1" name="com1" value="Advanced" disabled>
-                <label for="comAdv1">Advance</label>
-                <input type="radio" id="comExp1" name="com1" value="Expert" disabled>
-                <label for="comExp1">Expert</label>
-              </td>
-            </tr>
-            <tr>
-              <td id="sercom2"><input type="checkbox" id="com2" name="Borehole Seismic" value="Borehole Seismic"
-                  disabled onclick="handleCom2(this)">
-                <label for="com2"> Borehole Seismic</label><br>
+                <input type="number" id="acousticsText" name="fname" style="border: 1px black solid" value=" " class="expInput" onchange="comp1Cal()">
               </td>
               <td>
-                <input type="radio" id="comInt2" name="com2" value="Intermediate" disabled>
-                <label for="comInt2">Intermediate</label>
-                <input type="radio" id="comAdv2" name="com2" value="Advanced" disabled>
-                <label for="comAdv2">Advance</label>
-                <input type="radio" id="comExp2" name="com2" value="Expert" disabled>
-                <label for="comExp2">Expert</label>
+                <Span id="comInt1" style="display: none;">Intermediate</Span>
+                <Span id="comAdv1" style="display: none;">Advance</Span>		
+                <Span id="comExp1" style="display: none;">Expert</Span>	             
               </td>
             </tr>
             <tr>
-              <td id="sercom3"><input type="checkbox" id="com3" name="Cement Logging" value="Cement Logging" disabled
-                  onclick="handleCom3(this)">
-                <label for="com3"> Cement Logging</label><br>
+              <td>
+              <Span>Borehole Seismic</Span>
               </td>
               <td>
-                <input type="radio" id="comInt3" name="com3" value="Intermediate" disabled>
-                <label for="comInt3">Intermediate</label>
-                <input type="radio" id="comAdv3" name="com3" value="Advanced" disabled>
-                <label for="comAdv3">Advance</label>
-                <input type="radio" id="comExp3" name="com3" value="Expert" disabled>
-                <label for="comExp3">Expert</label>
-              </td>
-            </tr>
-            <tr>
-              <td id="sercom4"><input type="checkbox" id="com4" name="Coring" value="Coring" disabled
-                  onclick="handleCom4(this)">
-                <label for="com4"> Coring</label><br>
+                <input type="number" id="seismicText" name="fname" style="border: 1px black solid" value=" " class="expInput" onchange="comp2Cal()">
               </td>
               <td>
-                <input type="radio" id="comInt4" name="com4" value="Intermediate" disabled>
-                <label for="comInt4">Intermediate</label>
-                <input type="radio" id="comAdv4" name="com4" value="Advanced" disabled>
-                <label for="comAdv4">Advance</label>
-                <input type="radio" id="comExp4" name="com4" value="Expert" disabled>
-                <label for="comExp4">Expert</label>
+                <Span id="comInt2" style="display: none;">Intermediate</Span>
+                <Span id="comAdv2" style="display: none;">Advance</Span>		
+                <Span id="comExp2" style="display: none;">Expert</Span>	             
               </td>
             </tr>
-            <tr>
-              <td id="sercom5"><input type="checkbox" id="com5" name="Corrosion" value="Corrosion" disabled
-                  onclick="handleCom5(this)">
-                <label for="com5"> Corrosion</label><br>
+<tr>
+              <td>
+              <Span>Cement Logging</Span>
               </td>
               <td>
-                <input type="radio" id="comInt5" name="com5" value="Intermediate" disabled>
-                <label for="comInt5">Intermediate</label>
-                <input type="radio" id="comAdv5" name="com5" value="Advanced" disabled>
-                <label for="comAdv5">Advance</label>
-                <input type="radio" id="comExp5" name="com5" value="Expert" disabled>
-                <label for="comExp5">Expert</label>
-              </td>
-            </tr>
-            <tr>
-              <td id="sercom6"><input type="checkbox" id="com6" name="Geology" value="Geology" disabled
-                  onclick="handleCom6(this)">
-                <label for="com6"> Geology</label><br>
+                <input type="number" id="cementText" name="fname" style="border: 1px black solid" value=" " class="expInput" onchange="comp3Cal()">
               </td>
               <td>
-                <input type="radio" id="comInt6" name="com6" value="Intermediate" disabled>
-                <label for="comInt6">Intermediate</label>
-                <input type="radio" id="comAdv6" name="com6" value="Advanced" disabled>
-                <label for="comAdv6">Advance</label>
-                <input type="radio" id="comExp6" name="com6" value="Expert" disabled>
-                <label for="comExp6">Expert</label>
+                <Span id="comInt3" style="display: none;">Intermediate</Span>
+                <Span id="comAdv3" style="display: none;">Advance</Span>		
+                <Span id="comExp3" style="display: none;">Expert</Span>	             
               </td>
             </tr>
-            <tr>
-              <td id="sercom7"><input type="checkbox" id="com7" name="Magnetic Resonance" value="Magnetic Resonance"
-                  disabled onclick="handleCom7(this)">
-                <label for="com7"> Magnetic Resonance</label><br>
+<tr>
+              <td>
+              <Span>Coring</Span>
               </td>
               <td>
-                <input type="radio" id="comInt7" name="com7" value="Intermediate" disabled>
-                <label for="comInt7">Intermediate</label>
-                <input type="radio" id="comAdv7" name="com7" value="Advanced" disabled>
-                <label for="comAdv7">Advance</label>
-                <input type="radio" id="comExp7" name="com7" value="Expert" disabled>
-                <label for="comExp7">Expert</label>
-              </td>
-            </tr>
-            <tr>
-              <td id="sercom8"><input type="checkbox" id="com8" name="Nuclear" value="Nuclear" disabled
-                  onclick="handleCom8(this)">
-                <label for="com8"> Nuclear</label><br>
+                <input type="number" id="coringText" name="fname" style="border: 1px black solid" value=" " class="expInput" onchange="comp4Cal()">
               </td>
               <td>
-                <input type="radio" id="comInt8" name="com8" value="Intermediate" disabled>
-                <label for="comInt8">Intermediate</label>
-                <input type="radio" id="comAdv8" name="com8" value="Advanced" disabled>
-                <label for="comAdv8">Advance</label>
-                <input type="radio" id="comExp8" name="com8" value="Expert" disabled>
-                <label for="comExp8">Expert</label>
+                <Span id="comInt4" style="display: none;">Intermediate</Span>
+                <Span id="comAdv4" style="display: none;">Advance</Span>		
+                <Span id="comExp4" style="display: none;">Expert</Span>	             
               </td>
-            </tr>
-            <tr>
-              <td id="sercom9"><input type="checkbox" id="com9" name="Plugs & Packers " value="Plugs & Packers "
-                  disabled onclick="handleCom9(this)">
-                <label for="com9"> Plugs & Packers </label><br>
+            </tr>	
+<tr>
+              <td>
+              <Span>Corrosion</Span>
               </td>
               <td>
-                <input type="radio" id="comInt9" name="com9" value="Intermediate" disabled>
-                <label for="comInt9">Intermediate</label>
-                <input type="radio" id="comAdv9" name="com9" value="Advanced" disabled>
-                <label for="comAdv9">Advance</label>
-                <input type="radio" id="comExp9" name="com9" value="Expert" disabled>
-                <label for="comExp9">Expert</label>
-              </td>
-            </tr>
-            <tr>
-              <td id="sercom10"><input type="checkbox" id="com10" name="Perforation" value="Perforation" disabled
-                  onclick="handleCom10(this)">
-                <label for="com10"> Perforation</label><br>
+                <input type="number" id="corrosionText" name="fname" style="border: 1px black solid" value=" " class="expInput" onchange="comp5Cal()">
               </td>
               <td>
-                <input type="radio" id="comInt10" name="com10" value="Intermediate" disabled>
-                <label for="comInt10">Intermediate</label>
-                <input type="radio" id="comAdv10" name="com10" value="Advanced" disabled>
-                <label for="comAdv10">Advance</label>
-                <input type="radio" id="comExp10" name="com10" value="Expert" disabled>
-                <label for="comExp10">Expert</label>
+                <Span id="comInt5" style="display: none;">Intermediate</Span>
+                <Span id="comAdv5" style="display: none;">Advance</Span>		
+                <Span id="comExp5" style="display: none;">Expert</Span>	             
               </td>
-            </tr>
-            <tr>
-              <td id="sercom11"><input type="checkbox" id="com11" name="Production Logging" value="Production Logging"
-                  disabled onclick="handleCom11(this)">
-                <label for="com11"> Production Logging</label><br>
+            </tr>	
+<tr>
+              <td>
+              <Span>Geology</Span>
               </td>
               <td>
-                <input type="radio" id="comInt11" name="com11" value="Intermediate" disabled disabled>
-                <label for="comInt11">Intermediate</label>
-                <input type="radio" id="comAdv11" name="com11" value="Advanced" disabled>
-                <label for="comAdv11">Advance</label>
-                <input type="radio" id="comExp11" name="com11" value="Expert" disabled>
-                <label for="comExp11">Expert</label>
-              </td>
-            </tr>
-            <tr>
-              <td id="sercom12"><input type="checkbox" id="com12" name="Reservoir Monitoring"
-                  value="Reservoir Monitoring" disabled onclick="handleCom12(this)">
-                <label for="com12"> Reservoir Monitoring</label><br>
+                <input type="number" id="geologyText" name="fname" style="border: 1px black solid" value=" " class="expInput" onchange="comp7Cal()">
               </td>
               <td>
-                <input type="radio" id="comInt12" name="com12" value="Intermediate" disabled>
-                <label for="comInt12">Intermediate</label>
-                <input type="radio" id="comAdv12" name="com12" value="Advanced" disabled>
-                <label for="comAdv12">Advance</label>
-                <input type="radio" id="comExp12" name="com12" value="Expert" disabled>
-                <label for="comExp12">Expert</label>
+                <Span id="comInt7" style="display: none;">Intermediate</Span>
+                <Span id="comAdv7" style="display: none;">Advance</Span>		
+                <Span id="comExp7" style="display: none;">Expert</Span>	             
               </td>
-            </tr>
-            <tr>
-              <td id="sercom13"><input type="checkbox" id="com13" name="Reservoir Pressure & Sampling"
-                  value="Reservoir Pressure & Sampling" disabled onclick="handleCom13(this)">
-                <label for="com13"> Reservoir Pressure & Sampling</label><br>
+            </tr>	
+<tr>
+              <td>
+              <Span>Magnetic Resonance</Span>
               </td>
               <td>
-                <input type="radio" id="comInt13" name="com13" value="Intermediate" disabled>
-                <label for="comInt13">Intermediate</label>
-                <input type="radio" id="comAdv13" name="com13" value="Advanced" disabled>
-                <label for="comAdv13">Advance</label>
-                <input type="radio" id="comExp13" name="com13" value="Expert" disabled>
-                <label for="comExp13">Expert</label>
-              </td>
-            </tr>
-            <tr>
-              <td id="sercom14"><input type="checkbox" id="com14" name="Resistivity" value="Resistivity" disabled
-                  onclick="handleCom14(this)">
-                <label for="com14"> Resistivity</label><br>
+                <input type="number" id="magneticText" name="fname" style="border: 1px black solid" value=" " class="expInput" onchange="comp8Cal()">
               </td>
               <td>
-                <input type="radio" id="comInt14" name="com14" value="Intermediate" disabled>
-                <label for="comInt14">Intermediate</label>
-                <input type="radio" id="comAdv14" name="com14" value="Advanced" disabled>
-                <label for="comAdv14">Advance</label>
-                <input type="radio" id="comExp14" name="com14" value="Expert" disabled>
-                <label for="comExp14">Expert</label>
+                <Span id="comInt8" style="display: none;">Intermediate</Span>
+                <Span id="comAdv8" style="display: none;">Advance</Span>		
+                <Span id="comExp8" style="display: none;">Expert</Span>	             
               </td>
-            </tr>
-            <tr>
-              <td id="sercom15"><input type="checkbox" id="com15" name="ReSOLVE" value="PReSOLVE" disabled
-                  onclick="handleCom15(this)">
-                <label for="com15"> ReSOLVE</label><br>
+            </tr>	
+<tr>
+              <td>
+              <Span>Nuclear</Span>
               </td>
               <td>
-                <input type="radio" id="comInt15" name="com15" value="Intermediate" disabled>
-                <label for="comInt15">Intermediate</label>
-                <input type="radio" id="comAdv15" name="com15" value="Advanced" disabled>
-                <label for="comAdv15">Advance</label>
-                <input type="radio" id="comExp15" name="com15" value="Expert" disabled>
-                <label for="comExp15">Expert</label>
-              </td>
-            </tr>
-            <tr>
-              <td id="sercom16"><input type="checkbox" id="com16" name="Pipe Recovery" value="Pipe Recovery" disabled
-                  onclick="handleCom16(this)">
-                <label for="com16"> Pipe Recovery </label><br>
+                <input type="number" id="nuclearText" name="fname" style="border: 1px black solid" value=" " class="expInput" onchange="comp9Cal()">
               </td>
               <td>
-                <input type="radio" id="comInt16" name="com16" value="Intermediate" disabled>
-                <label for="comInt16">Intermediate</label>
-                <input type="radio" id="comAdv16" name="com16" value="Advanced" disabled>
-                <label for="comAdv16">Advance</label>
-                <input type="radio" id="comExp16" name="com16" value="Expert" disabled>
-                <label for="comExp16">Expert</label>
+                <Span id="comInt9" style="display: none;">Intermediate</Span>
+                <Span id="comAdv9" style="display: none;">Advance</Span>		
+                <Span id="comExp9" style="display: none;">Expert</Span>	             
               </td>
             </tr>
-            <tr>
-              <td id="sercom17"><input type="checkbox" id="com17" name="Conveyance" value="Conveyance" disabled
-                  onclick="handleCom17(this)">
-                <label for="com17"> Conveyance</label><br>
+<tr>
+              <td>
+              <Span>Plugs & Packers</Span>
               </td>
               <td>
-                <input type="radio" id="comInt17" name="com17" value="Intermediate" disabled>
-                <label for="comInt17">Intermediate</label>
-                <input type="radio" id="comAdv17" name="com17" value="Advanced" disabled>
-                <label for="comAdv17">Advance</label>
-                <input type="radio" id="comExp17" name="com17" value="Expert" disabled>
-                <label for="comExp17">Expert</label>
+                <input type="number" id="pPText" name="fname" style="border: 1px black solid" value=" " class="expInput" onchange="comp10Cal()">
+              </td>
+              <td>
+                <Span id="comInt10" style="display: none;">Intermediate</Span>
+                <Span id="comAdv10" style="display: none;">Advance</Span>		
+                <Span id="comExp10" style="display: none;">Expert</Span>	             
               </td>
             </tr>
+<tr>
+              <td>
+              <Span>Perforation</Span>
+              </td>
+              <td>
+                <input type="number" id="perforationText" name="fname" style="border: 1px black solid" value=" " class="expInput" onchange="comp11Cal()">
+              </td>
+              <td>
+                <Span id="comInt11" style="display: none;">Intermediate</Span>
+                <Span id="comAdv11" style="display: none;">Advance</Span>		
+                <Span id="comExp11" style="display: none;">Expert</Span>	             
+              </td>
+            </tr>	
+<tr>
+              <td>
+              <Span>Producation Logging</Span>
+              </td>
+              <td>
+                <input type="number" id="productionText" name="fname" style="border: 1px black solid" value=" " class="expInput" onchange="comp12Cal()">
+              </td>
+              <td>
+                <Span id="comInt12" style="display: none;">Intermediate</Span>
+                <Span id="comAdv12" style="display: none;">Advance</Span>		
+                <Span id="comExp12" style="display: none;">Expert</Span>	             
+              </td>
+            </tr>	
+<tr>
+              <td>
+              <Span>Reservoir Monitoring</Span>
+              </td>
+              <td>
+                <input type="number" id="RMText" name="fname" style="border: 1px black solid" value=" " class="expInput" onchange="comp13Cal()">
+              </td>
+              <td>
+                <Span id="comInt13" style="display: none;">Intermediate</Span>
+                <Span id="comAdv13" style="display: none;">Advance</Span>		
+                <Span id="comExp13" style="display: none;">Expert</Span>	             
+              </td>
+            </tr>				
+<tr>
+              <td>
+              <Span>Reservoir Pressure & Sampling</Span>
+              </td>
+              <td>
+                <input type="number" id="RPText" name="fname" style="border: 1px black solid" value=" " class="expInput" onchange="comp14Cal()">
+              </td>
+              <td>
+                <Span id="comInt14" style="display: none;">Intermediate</Span>
+                <Span id="comAdv14" style="display: none;">Advance</Span>		
+                <Span id="comExp14" style="display: none;">Expert</Span>	             
+              </td>
+            </tr>							
+<tr>
+              <td>
+              <Span>Resistivity</Span>
+              </td>
+              <td>
+                <input type="number" id="resistivityText" name="fname" style="border: 1px black solid" value=" " class="expInput" onchange="comp15Cal()">
+              </td>
+              <td>
+                <Span id="comInt15" style="display: none;">Intermediate</Span>
+                <Span id="comAdv15" style="display: none;">Advance</Span>		
+                <Span id="comExp15" style="display: none;">Expert</Span>	             
+              </td>
+            </tr>										
+<tr>
+              <td>
+              <Span>ReSOLVE</Span>
+              </td>
+              <td>
+                <input type="number" id="resolveText" name="fname" style="border: 1px black solid" value=" " class="expInput" onchange="comp15Cal()">
+              </td>
+              <td>
+                <Span id="comInt16" style="display: none;">Intermediate</Span>
+                <Span id="comAdv16" style="display: none;">Advance</Span>		
+                <Span id="comExp16" style="display: none;">Expert</Span>	             
+              </td>
+            </tr>										
+			
+<tr>
+              <td>
+              <Span>Pipe Recovery</Span>
+              </td>
+              <td>
+                <input type="number" id="pipeText" name="fname" style="border: 1px black solid" value=" " class="expInput" onchange="comp17Cal()">
+              </td>
+              <td>
+                <Span id="comInt17" style="display: none;">Intermediate</Span>
+                <Span id="comAdv17" style="display: none;">Advance</Span>		
+                <Span id="comExp17" style="display: none;">Expert</Span>	             
+              </td>
+            </tr>										
+
+<tr>
+              <td>
+              <Span>Conveyance</Span>
+              </td>
+              <td>
+                <input type="number" id="conveyanceText" name="fname" style="border: 1px black solid" value=" " class="expInput" onchange="comp18Cal()">
+              </td>
+              <td>
+                <Span id="comInt18" style="display: none;">Intermediate</Span>
+                <Span id="comAdv18" style="display: none;">Advance</Span>		
+                <Span id="comExp18" style="display: none;">Expert</Span>	             
+              </td>
+            </tr>										
+			
           </table>
         </form>
         <div id="stickyBottom">
-          <span class="alerts">*Minimum 6 required</span><br>
-          <button id="clearCom" type="button" onclick="clearRadioButtonsCom(),clearcheckCom()"> Clear Selection</button>
+          <span class="alerts">*User can enter only numeric values</span><br>
+          <button id="clearCom" type="button" onclick="clearComp()"> Clear Values</button>
         </div>
       </div>
 
@@ -478,11 +468,12 @@
       <!-- <button id ="clearCore" type ="button" onclick="clearRadioButtonsInt(),clearRadioButtonsAdv(),clearRadioButtonsExp()"> Clear Expertise Selection</button>  -->
       <!-- <button id ="button" type="button"onclick="getCheckboxCount()"> Submit2 </button> -->
       <!-- <button onclick="G08()">Count Checkboxes</button>  -->
-      <span class="alerts">*Please Click on refresh button everytime a new change is made</span><br>
+      <!-- <span class="alerts">*Please Click on refresh button everytime a new change is made</span><br>
       <button id="refresh" type="button" onclick="location.reload();"> Refresh </button>
       <button id="submitbutton" type="button" onclick="showName(),calculateGrade(),showResult(),showReportbutton()" disabled> Submit
       </button>
-      <button id="reportsbutton" type="button" onclick="exportHTMLtoPDF()" disabled> Dowload Report </button>
+      <button id="reportsbutton" type="button" onclick="exportHTMLtoPDF()" disabled> Dowload Report </button> -->
+      <p>To navigate to the main site <a href="https://scoreform.github.io/InsertInfo/" target="_blank">Click here.</a></p>
     </div>
 
 

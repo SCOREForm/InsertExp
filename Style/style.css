@@ -2,9 +2,52 @@
     border-radius: 5px;
 }
 
+.firstCol{
+    width:30%;
+}
+
+.secondCol{
+    width:30%;
+}
+
+.thirdCol{
+    width:30%;
+}
+
+.expInput{
+    width:30%;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 15px;
+    /* border-bottom: 1px dotted black; */
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 240px;
+    background-color: #0014DB;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+    /* Position the tooltip */
+    position: fixed;
+    z-index: 1;
+  }
+
+  .tooltip:hover .tooltiptext {
+    visibility: visible; 
+
+    
+  }
 img {
     vertical-align: middle;
-    border: 1px black solid;
+    /* border: 1px black solid; */
     margin-left: 10px;
     margin-top: 10px;
   }
