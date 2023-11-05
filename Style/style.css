@@ -1,0 +1,195 @@
+.vscomp-toggle-button{
+    border-radius: 5px;
+}
+
+img {
+    vertical-align: middle;
+    border: 1px black solid;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+
+#header{
+    width: 100%;
+    display: flex;
+}
+  
+#logo{
+    text-align: left;
+    float: left;
+    width: 10%;
+}  
+
+#heading{
+    float: right;
+    width: 90%;
+    text-align: center;
+}
+
+#comDiv{
+    /* padding-top: 30px; */
+    /* padding-bottom: 20px; */
+    text-align: center;
+    border: 1px solid black;
+    width:38%;
+    float: left;
+    height: 370px;
+    overflow-y: scroll;
+}
+
+#WlDiv{
+    padding-bottom: 20px;
+    text-align: center;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    width:31%;
+    float: left;
+    height: 350px;
+}
+
+#coreDiv{
+    padding-bottom: 20px;
+    text-align: center;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+    width:30%;
+    float: left;
+    height: 350px;
+}
+
+#compExperise{
+    padding-left: 26px;
+    padding-top: 10px;
+}
+ 
+
+#actionButtons{
+    padding-top: 20px;
+    text-align: center;
+}
+
+.alerts{
+    font-size: 14px;
+    font-weight: bold;
+    text-align: left;
+}
+
+#refresh{
+    padding-right:10px ;
+    padding-left:10px ;
+    font-size: 20px;
+    border-radius: 5px;
+    margin-top:5px 
+}
+
+#submitbutton{
+    padding-right:10px ;
+    padding-left:10px ;
+    font-size: 20px;
+    border-radius: 5px;
+    margin-top:5px
+}
+
+#reportsbutton{
+    padding-right:10px ;
+    padding-left:10px ;
+    font-size: 20px;
+    border-radius: 5px;
+    margin-top:5px
+}
+
+#formtop{
+    /* padding-top: 10px; */
+}
+
+#Elements{
+    padding-top: 40px;
+    padding-left: 10px;
+    font-size: 13px;
+}
+
+#userForm{
+    border: 1px solid black;
+    /* padding: 25px; */
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#actionButtons{
+    display: inline-block;
+    width: 100%;
+    
+}
+
+#UserName{
+    height: 25px;
+    width: 200px;
+    border: none;
+    border-radius: 4px;
+}
+
+#sercom1, #sercom2, #sercom3, #sercom4, #sercom5, #sercom6,
+#sercom7, #sercom8, #sercom9, #sercom10, #sercom11,
+#sercom12, #sercom13, #sercom14, #sercom15, #sercom16, #sercom17{
+    padding-left: 10px;
+    text-align: left;
+}
+
+#serCore1, #serCore2, #serCore3, #serCore4{
+    padding-left: 10px;
+    text-align: left;
+}
+
+#serWl1, #serWl2, #serWl3, #serWl4{
+    padding-left: 10px;
+    text-align: left;
+}
+
+#sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    padding-top: 13px;
+    font-size: 25px;
+  }
+
+  #stickyBottom {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+    background-color: white;
+    padding-bottom: 20px;
+    font-size: 25px;
+    text-align: center;
+  }
+  #stickyBottomWl {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+    background-color: white;
+    padding-top: 46px;
+    padding-bottom: 20px;
+    font-size: 25px;
+    text-align: center;
+  }
+  #stickyBottomCore {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+    background-color: white;
+    padding-top: 46px;
+    padding-bottom: 20px;
+    font-size: 25px;
+    text-align: center;
+  }
+
+/* #clearCore{
+    margin-right: 50px;
+}   */
+  #result{
+    width: 100%;
+    text-align: center;
+  }  
