@@ -7,7 +7,7 @@
 
 document.getElementById("UserName").addEventListener('keydown', function (e) {
     if (this.value.length === 0 && e.which === 32) e.preventDefault();
-  });
+});
 
 
 function handleComp() {
@@ -17,7 +17,7 @@ function handleComp() {
         document.getElementById('comp').disabled = false;
     }
 }
- 
+
 function handleExp() {
     if (this.value == '01') {
         document.getElementById('exp').disabled = true;
@@ -25,7 +25,7 @@ function handleExp() {
         document.getElementById('exp').disabled = false;
     }
 }
- 
+
 function handletechDev() {
     if (this.value == '01') {
         document.getElementById('tech-dev').disabled = true;
@@ -41,7 +41,7 @@ function handletechtest() {
         document.getElementById('tech-tester').disabled = false;
     }
 }
- 
+
 function enableSubmit() {
     if (this.value == '01') {
         document.getElementById('submitbutton').disabled = true;
@@ -50,27 +50,27 @@ function enableSubmit() {
     }
 }
 
-function showDev(){
+function showDev() {
     var element = document.getElementById("devTech");
     element.style.display = "inline";
 }
 
-function hideDev(){
+function hideDev() {
     var element = document.getElementById("devTech");
     element.style.display = "none";
 }
- 
-function showTest(){
+
+function showTest() {
     var element = document.getElementById("testerTech");
     element.style.display = "inline";
 }
 
-function hideTest(){
+function hideTest() {
     var element = document.getElementById("testerTech");
     element.style.display = "none";
 }
 
-function showName(){
+function showName() {
     var x = document.getElementById("UserName").value;
     document.getElementById("CandName").innerHTML = x;
 }
@@ -78,37 +78,37 @@ function showName(){
 
 
 
-function showAGrade(){
-var e = document.getElementById("edu");
-var value = e.value;
-var text = e.options[e.selectedIndex].text;
-    if(text == "Diploma"){
-        document.getElementById("Grade").textContent="D";;
+function showAGrade() {
+    var e = document.getElementById("edu");
+    var value = e.value;
+    var text = e.options[e.selectedIndex].text;
+    if (text == "Diploma") {
+        document.getElementById("Grade").textContent = "D";;
     }
-    if(text == "Graduate"){
-        document.getElementById("Grade").textContent="C";;
+    if (text == "Graduate") {
+        document.getElementById("Grade").textContent = "C";;
     }
-    if(text == "Post Graduate"){
-        document.getElementById("Grade").textContent="B";;
+    if (text == "Post Graduate") {
+        document.getElementById("Grade").textContent = "B";;
     }
-    if(text == "Masters"){
-        document.getElementById("Grade").textContent="A";;
+    if (text == "Masters") {
+        document.getElementById("Grade").textContent = "A";;
     }
 }
 
 
-function showResult(){
+function showResult() {
     var element = document.getElementById("result");
     element.style.display = "inline-block";
 }
 
-function showReportbutton(){
+function showReportbutton() {
     if (this.value == '01') {
         document.getElementById('reportsbutton').disabled = true;
     } else {
         document.getElementById('reportsbutton').disabled = false;
     }
-}   
+}
 
 function enableButton() {
     if (this.value == '01') {
@@ -125,7 +125,7 @@ function handleRadioHall() {
         document.getElementById('Hall').disabled = false;
     }
 }
- 
+
 function handleRadioBaker() {
     if (this.value == '01') {
         document.getElementById('Baker').disabled = true;
@@ -170,7 +170,7 @@ function handleCompentency() {
         document.getElementById('com4').disabled = true;
     } else {
         document.getElementById('com4').disabled = false;
-    }if (this.value == '01') {
+    } if (this.value == '01') {
         document.getElementById('com5').disabled = true;
     } else {
         document.getElementById('com5').disabled = false;
@@ -200,13 +200,13 @@ function handleCompentency() {
     } else {
         document.getElementById('com10').disabled = false;
     }
-    
+
     if (this.value == '01') {
         document.getElementById('com11').disabled = true;
     } else {
         document.getElementById('com11').disabled = false;
     }
-    
+
     if (this.value == '01') {
         document.getElementById('com12').disabled = true;
     } else {
@@ -227,20 +227,20 @@ function handleCompentency() {
     } else {
         document.getElementById('com15').disabled = false;
     }
-    
+
     if (this.value == '01') {
         document.getElementById('com16').disabled = true;
     } else {
         document.getElementById('com16').disabled = false;
     }
-    
+
     if (this.value == '01') {
         document.getElementById('com17').disabled = true;
     } else {
         document.getElementById('com17').disabled = false;
     }
     // For WL Services
-    
+
     if (this.value == '01') {
         document.getElementById('wl1').disabled = true;
     } else {
@@ -408,7 +408,7 @@ function handleCom7(com7) {
     if (!comExp7.disabled) {
         comExp7.focus();
     }
-}       
+}
 
 function handleCom8(com8) {
     var comInt8 = document.getElementById("comInt8");
@@ -662,21 +662,11 @@ function handleWl4(wl4) {
     }
 }
 
-function handlecCre1(core1) {
-    var coreInt1 = document.getElementById("coreInt1");
-    coreInt1.disabled = core1.checked ? false : true;
-    if (!coreInt1.disabled) {
-        coreInt1.focus();
-    }
-    var coreAdv1 = document.getElementById("coreAdv1");
-    coreAdv1.disabled = core1.checked ? false : true;
-    if (!coreAdv1.disabled) {
-        coreAdv1.focus();
-    }
-    var coreExp1 = document.getElementById("coreExp1");
-    coreExp1.disabled = core1.checked ? false : true;
-    if (!coreExp1.disabled) {
-        coreExp1.focus();
+function handlecCre1() {
+    if (this.value == '01') {
+        document.getElementById('winchText').disabled = true;
+    } else {
+        document.getElementById('winchText').disabled = false;
     }
 }
 
@@ -742,285 +732,976 @@ function handlecCre4(core4) {
 
 // console.log(getCheckboxCount());  
 
-function calculateGrade(){
+function core1Cal() {
+    var a = document.getElementById("winchText").value
+    if (a >= 1 && a <= 3) {
+        document.getElementById("crInt1").style.display = "block";
+        document.getElementById("crAdv1").style.display = "none";
+        document.getElementById("crExp1").style.display = "none";
+    }
+    else if (a >= 4 && a <= 5) {
+        document.getElementById("crInt1").style.display = "none";
+        document.getElementById("crAdv1").style.display = "block";
+        document.getElementById("crExp1").style.display = "none";
+    }
+    else if (a >= 6 && a <= 10) {
+        document.getElementById("crInt1").style.display = "none";
+        document.getElementById("crAdv1").style.display = "none";
+        document.getElementById("crExp1").style.display = "block";
+    }
+    else if (a <= 0) {
+        document.getElementById("crInt1").style.display = "none";
+        document.getElementById("crAdv1").style.display = "none";
+        document.getElementById("crExp1").style.display = "none";
+    }
+}
+
+function core2Cal() {
+    var b = document.getElementById("unitsText").value
+    if (b == 1) {
+        document.getElementById("crInt2").style.display = "block";
+        document.getElementById("crAdv2").style.display = "none";
+        document.getElementById("crExp2").style.display = "none";
+    }
+    else if (b >= 2 && b <= 5) {
+        document.getElementById("crInt2").style.display = "none";
+        document.getElementById("crAdv2").style.display = "block";
+        document.getElementById("crExp2").style.display = "none";
+    }
+    else if (b >= 6 && b <= 10) {
+        document.getElementById("crInt2").style.display = "none";
+        document.getElementById("crAdv2").style.display = "none";
+        document.getElementById("crExp2").style.display = "block";
+    }
+    else if (b <= 0) {
+        document.getElementById("crInt2").style.display = "none";
+        document.getElementById("crAdv2").style.display = "none";
+        document.getElementById("crExp2").style.display = "none";
+    }
+}
+
+function core3Cal() {
+    var c = document.getElementById("rigUpText").value
+    if (c == 1) {
+        document.getElementById("crInt3").style.display = "block";
+        document.getElementById("crAdv3").style.display = "none";
+        document.getElementById("crExp3").style.display = "none";
+    }
+    else if (c >= 2 && c <= 5) {
+        document.getElementById("crInt3").style.display = "none";
+        document.getElementById("crAdv3").style.display = "block";
+        document.getElementById("crExp3").style.display = "none";
+    }
+    else if (c >= 6 && c <= 10) {
+        document.getElementById("crInt3").style.display = "none";
+        document.getElementById("crAdv3").style.display = "none";
+        document.getElementById("crExp3").style.display = "block";
+    }
+    else if (c <= 0) {
+        document.getElementById("crInt3").style.display = "none";
+        document.getElementById("crAdv3").style.display = "none";
+        document.getElementById("crExp3").style.display = "none";
+    }
+}
+
+function core4Cal() {
+    var d = document.getElementById("basicText").value
+    if (d == 1) {
+        document.getElementById("crInt4").style.display = "block";
+        document.getElementById("crAdv4").style.display = "none";
+        document.getElementById("crExp4").style.display = "none";
+    }
+    else if (d >= 2 && d <= 5) {
+        document.getElementById("crInt4").style.display = "none";
+        document.getElementById("crAdv4").style.display = "block";
+        document.getElementById("crExp4").style.display = "none";
+    }
+    else if (d >= 6 && d <= 10) {
+        document.getElementById("crInt4").style.display = "none";
+        document.getElementById("crAdv4").style.display = "none";
+        document.getElementById("crExp4").style.display = "block";
+    }
+    else if (d <= 0) {
+        document.getElementById("crInt4").style.display = "none";
+        document.getElementById("crAdv4").style.display = "none";
+        document.getElementById("crExp4").style.display = "none";
+    }
+}
+
+function wl1Cal() {
+    var d = document.getElementById("radiationText").value
+    if (d >= 1 && d <= 3) {
+        document.getElementById("wlInt1").style.display = "block";
+        document.getElementById("wlAdv1").style.display = "none";
+        document.getElementById("wlExp1").style.display = "none";
+    }
+    else if (d >= 4 && d <= 5) {
+        document.getElementById("wlInt1").style.display = "none";
+        document.getElementById("wlAdv1").style.display = "block";
+        document.getElementById("wlExp1").style.display = "none";
+    }
+    else if (d >= 6 && d <= 10) {
+        document.getElementById("wlInt1").style.display = "none";
+        document.getElementById("wlAdv1").style.display = "none";
+        document.getElementById("wlExp1").style.display = "block";
+    }
+    else if (d <= 0) {
+        document.getElementById("wlInt1").style.display = "none";
+        document.getElementById("wlAdv1").style.display = "none";
+        document.getElementById("wlExp1").style.display = "none";
+    }
+}
+
+function wl2Cal() {
+    var d = document.getElementById("ExplosivesText").value
+    if (d >= 1 && d <= 3) {
+        document.getElementById("wlInt2").style.display = "block";
+        document.getElementById("wlAdv2").style.display = "none";
+        document.getElementById("wlExp2").style.display = "none";
+    }
+    else if (d >= 4 && d <= 5) {
+        document.getElementById("wlInt2").style.display = "none";
+        document.getElementById("wlAdv2").style.display = "block";
+        document.getElementById("wlExp2").style.display = "none";
+    }
+    else if (d >= 6 && d <= 10) {
+        document.getElementById("wlInt2").style.display = "none";
+        document.getElementById("wlAdv2").style.display = "none";
+        document.getElementById("wlExp2").style.display = "block";
+    }
+    else if (d <= 0) {
+        document.getElementById("wlInt2").style.display = "none";
+        document.getElementById("wlAdv2").style.display = "none";
+        document.getElementById("wlExp2").style.display = "none";
+    }
+}
+
+function wl3Cal() {
+    var d = document.getElementById("controlText").value
+    if (d >= 1 && d <= 3) {
+        document.getElementById("wlInt3").style.display = "block";
+        document.getElementById("wlAdv3").style.display = "none";
+        document.getElementById("wlExp3").style.display = "none";
+    }
+    else if (d >= 4 && d <= 5) {
+        document.getElementById("wlInt3").style.display = "none";
+        document.getElementById("wlAdv3").style.display = "block";
+        document.getElementById("wlExp3").style.display = "none";
+    }
+    else if (d >= 6 && d <= 10) {
+        document.getElementById("wlInt3").style.display = "none";
+        document.getElementById("wlAdv3").style.display = "none";
+        document.getElementById("wlExp3").style.display = "block";
+    }
+    else if (d <= 0) {
+        document.getElementById("wlInt3").style.display = "none";
+        document.getElementById("wlAdv3").style.display = "none";
+        document.getElementById("wlExp3").style.display = "none";
+    }
+}
+
+function comp1Cal() {
+    var d = document.getElementById("acousticsText").value
+    if (d == 1) {
+        document.getElementById("comInt1").style.display = "block";
+        document.getElementById("comAdv1").style.display = "none";
+        document.getElementById("comExp1").style.display = "none";
+    }
+    else if (d >= 2 && d <= 3) {
+        document.getElementById("comInt1").style.display = "none";
+        document.getElementById("comAdv1").style.display = "block";
+        document.getElementById("comExp1").style.display = "none";
+    }
+    else if (d >= 4 && d <= 10) {
+        document.getElementById("comInt1").style.display = "none";
+        document.getElementById("comAdv1").style.display = "none";
+        document.getElementById("comExp1").style.display = "block";
+    }
+    else if (d <= 0) {
+        document.getElementById("comInt1").style.display = "none";
+        document.getElementById("comAdv1").style.display = "none";
+        document.getElementById("comExp1").style.display = "none";
+    }
+}
+
+function comp2Cal() {
+    var d = document.getElementById("seismicText").value
+    if (d == 1) {
+        document.getElementById("comInt2").style.display = "block";
+        document.getElementById("comAdv2").style.display = "none";
+        document.getElementById("comExp2").style.display = "none";
+    }
+    else if (d >= 2 && d <= 5) {
+        document.getElementById("comInt2").style.display = "none";
+        document.getElementById("comAdv2").style.display = "block";
+        document.getElementById("comExp2").style.display = "none";
+    }
+    else if (d >= 6 && d <= 10) {
+        document.getElementById("comInt2").style.display = "none";
+        document.getElementById("comAdv2").style.display = "none";
+        document.getElementById("comExp2").style.display = "block";
+    }
+    else if (d <= 0) {
+        document.getElementById("comInt2").style.display = "none";
+        document.getElementById("comAdv2").style.display = "none";
+        document.getElementById("comExp2").style.display = "none";
+    }
+}
+function comp3Cal() {
+    var d = document.getElementById("cementText").value
+    if (d == 1) {
+        document.getElementById("comInt3").style.display = "block";
+        document.getElementById("comAdv3").style.display = "none";
+        document.getElementById("comExp3").style.display = "none";
+    }
+    else if (d >= 2 && d <= 5) {
+        document.getElementById("comInt3").style.display = "none";
+        document.getElementById("comAdv3").style.display = "block";
+        document.getElementById("comExp3").style.display = "none";
+    }
+    else if (d >= 6 && d <= 10) {
+        document.getElementById("comInt3").style.display = "none";
+        document.getElementById("comAdv3").style.display = "none";
+        document.getElementById("comExp3").style.display = "block";
+    }
+    else if (d <= 0) {
+        document.getElementById("comInt3").style.display = "none";
+        document.getElementById("comAdv3").style.display = "none";
+        document.getElementById("comExp3").style.display = "none";
+    }
+}
+
+function comp4Cal() {
+    var d = document.getElementById("coringText").value
+    if (d == 1) {
+        document.getElementById("comInt4").style.display = "block";
+        document.getElementById("comAdv4").style.display = "none";
+        document.getElementById("comExp4").style.display = "none";
+    }
+    else if (d >= 2 && d <= 5) {
+        document.getElementById("comInt4").style.display = "none";
+        document.getElementById("comAdv4").style.display = "block";
+        document.getElementById("comExp4").style.display = "none";
+    }
+    else if (d >= 6 && d <= 10) {
+        document.getElementById("comInt4").style.display = "none";
+        document.getElementById("comAdv4").style.display = "none";
+        document.getElementById("comExp4").style.display = "block";
+    }
+    else if (d <= 0) {
+        document.getElementById("comInt4").style.display = "none";
+        document.getElementById("comAdv4").style.display = "none";
+        document.getElementById("comExp4").style.display = "none";
+    }
+}
+function comp4Cal() {
+    var d = document.getElementById("coringText").value
+    if (d == 1) {
+        document.getElementById("comInt4").style.display = "block";
+        document.getElementById("comAdv4").style.display = "none";
+        document.getElementById("comExp4").style.display = "none";
+    }
+    else if (d >= 2 && d <= 5) {
+        document.getElementById("comInt4").style.display = "none";
+        document.getElementById("comAdv4").style.display = "block";
+        document.getElementById("comExp4").style.display = "none";
+    }
+    else if (d >= 6 && d <= 10) {
+        document.getElementById("comInt4").style.display = "none";
+        document.getElementById("comAdv4").style.display = "none";
+        document.getElementById("comExp4").style.display = "block";
+    }
+    else if (d <= 0) {
+        document.getElementById("comInt4").style.display = "none";
+        document.getElementById("comAdv4").style.display = "none";
+        document.getElementById("comExp4").style.display = "none";
+    }
+}
+
+function comp5Cal() {
+    var d = document.getElementById("corrosionText").value
+    if (d == 1) {
+        document.getElementById("comInt6").style.display = "block";
+        document.getElementById("comAdv6").style.display = "none";
+        document.getElementById("comExp6").style.display = "none";
+    }
+    else if (d >= 2 && d <= 5) {
+        document.getElementById("comInt6").style.display = "none";
+        document.getElementById("comAdv6").style.display = "block";
+        document.getElementById("comExp6").style.display = "none";
+    }
+    else if (d >= 6 && d <= 10) {
+        document.getElementById("comInt6").style.display = "none";
+        document.getElementById("comAdv6").style.display = "none";
+        document.getElementById("comExp6").style.display = "block";
+    }
+    else if (d <= 0) {
+        document.getElementById("comInt6").style.display = "none";
+        document.getElementById("comAdv6").style.display = "none";
+        document.getElementById("comExp6").style.display = "none";
+    }
+}
+function comp7Cal() {
+    var d = document.getElementById("geologyText").value
+    if (d == 1) {
+        document.getElementById("comInt7").style.display = "block";
+        document.getElementById("comAdv7").style.display = "none";
+        document.getElementById("comExp7").style.display = "none";
+    }
+    else if (d >= 2 && d <= 5) {
+        document.getElementById("comInt7").style.display = "none";
+        document.getElementById("comAdv7").style.display = "block";
+        document.getElementById("comExp7").style.display = "none";
+    }
+    else if (d >= 6 && d <= 10) {
+        document.getElementById("comInt7").style.display = "none";
+        document.getElementById("comAdv7").style.display = "none";
+        document.getElementById("comExp7").style.display = "block";
+    }
+    else if (d <= 0) {
+        document.getElementById("comInt7").style.display = "none";
+        document.getElementById("comAdv7").style.display = "none";
+        document.getElementById("comExp7").style.display = "none";
+    }
+}
+function comp8Cal() {
+    var d = document.getElementById("magneticText").value
+    if (d == 1) {
+        document.getElementById("comInt8").style.display = "block";
+        document.getElementById("comAdv8").style.display = "none";
+        document.getElementById("comExp8").style.display = "none";
+    }
+    else if (d >= 2 && d <= 5) {
+        document.getElementById("comInt8").style.display = "none";
+        document.getElementById("comAdv8").style.display = "block";
+        document.getElementById("comExp8").style.display = "none";
+    }
+    else if (d >= 6 && d <= 10) {
+        document.getElementById("comInt8").style.display = "none";
+        document.getElementById("comAdv8").style.display = "none";
+        document.getElementById("comExp8").style.display = "block";
+    }
+    else if (d <= 0) {
+        document.getElementById("comInt8").style.display = "none";
+        document.getElementById("comAdv8").style.display = "none";
+        document.getElementById("comExp8").style.display = "none";
+    }
+}
+function comp9Cal() {
+    var d = document.getElementById("nuclearText").value
+    if (d == 1) {
+        document.getElementById("comInt9").style.display = "block";
+        document.getElementById("comAdv9").style.display = "none";
+        document.getElementById("comExp9").style.display = "none";
+    }
+    else if (d >= 2 && d <= 3) {
+        document.getElementById("comInt9").style.display = "none";
+        document.getElementById("comAdv9").style.display = "block";
+        document.getElementById("comExp9").style.display = "none";
+    }
+    else if (d >= 4 && d <= 10) {
+        document.getElementById("comInt9").style.display = "none";
+        document.getElementById("comAdv9").style.display = "none";
+        document.getElementById("comExp9").style.display = "block";
+    }
+    else if (d <= 0) {
+        document.getElementById("comInt9").style.display = "none";
+        document.getElementById("comAdv9").style.display = "none";
+        document.getElementById("comExp9").style.display = "none";
+    }
+}
+function comp10Cal() {
+    var d = document.getElementById("pPText").value
+    if (d == 1) {
+        document.getElementById("comInt10").style.display = "block";
+        document.getElementById("comAdv10").style.display = "none";
+        document.getElementById("comExp10").style.display = "none";
+    }
+    else if (d >= 2 && d <= 5) {
+        document.getElementById("comInt10").style.display = "none";
+        document.getElementById("comAdv10").style.display = "block";
+        document.getElementById("comExp10").style.display = "none";
+    }
+    else if (d >= 6 && d <= 10) {
+        document.getElementById("comInt10").style.display = "none";
+        document.getElementById("comAdv10").style.display = "none";
+        document.getElementById("comExp10").style.display = "block";
+    }
+    else if (d <= 0) {
+        document.getElementById("comInt10").style.display = "none";
+        document.getElementById("comAdv10").style.display = "none";
+        document.getElementById("comExp10").style.display = "none";
+    }
+}
+function comp11Cal() {
+    var d = document.getElementById("Perforation").value
+    if (d == 1) {
+        document.getElementById("comInt11").style.display = "block";
+        document.getElementById("comAdv11").style.display = "none";
+        document.getElementById("comExp11").style.display = "none";
+    }
+    else if (d >= 2 && d <= 5) {
+        document.getElementById("comInt11").style.display = "none";
+        document.getElementById("comAdv11").style.display = "block";
+        document.getElementById("comExp11").style.display = "none";
+    }
+    else if (d >= 6 && d <= 10) {
+        document.getElementById("comInt11").style.display = "none";
+        document.getElementById("comAdv11").style.display = "none";
+        document.getElementById("comExp11").style.display = "block";
+    }
+    else if (d <= 0) {
+        document.getElementById("comInt11").style.display = "none";
+        document.getElementById("comAdv11").style.display = "none";
+        document.getElementById("comExp11").style.display = "none";
+    }
+}
+function comp12Cal() {
+    var d = document.getElementById("productionText").value
+    if (d == 1) {
+        document.getElementById("comInt12").style.display = "block";
+        document.getElementById("comAdv12").style.display = "none";
+        document.getElementById("comExp12").style.display = "none";
+    }
+    else if (d >= 2 && d <= 5) {
+        document.getElementById("comInt12").style.display = "none";
+        document.getElementById("comAdv12").style.display = "block";
+        document.getElementById("comExp12").style.display = "none";
+    }
+    else if (d >= 6 && d <= 10) {
+        document.getElementById("comInt12").style.display = "none";
+        document.getElementById("comAdv12").style.display = "none";
+        document.getElementById("comExp12").style.display = "block";
+    }
+    else if (d <= 0) {
+        document.getElementById("comInt12").style.display = "none";
+        document.getElementById("comAdv12").style.display = "none";
+        document.getElementById("comExp12").style.display = "none";
+    }
+}
+function comp13Cal() {
+    var d = document.getElementById("RMText").value
+    if (d == 1) {
+        document.getElementById("comInt13").style.display = "block";
+        document.getElementById("comAdv13").style.display = "none";
+        document.getElementById("comExp13").style.display = "none";
+    }
+    else if (d >= 2 && d <= 5) {
+        document.getElementById("comInt13").style.display = "none";
+        document.getElementById("comAdv13").style.display = "block";
+        document.getElementById("comExp13").style.display = "none";
+    }
+    else if (d >= 6 && d <= 10) {
+        document.getElementById("comInt13").style.display = "none";
+        document.getElementById("comAdv13").style.display = "none";
+        document.getElementById("comExp13").style.display = "block";
+    }
+    else if (d <= 0) {
+        document.getElementById("comInt13").style.display = "none";
+        document.getElementById("comAdv13").style.display = "none";
+        document.getElementById("comExp13").style.display = "none";
+    }
+}
+function comp14Cal() {
+    var d = document.getElementById("RPText").value
+    if (d == 1) {
+        document.getElementById("comInt14").style.display = "block";
+        document.getElementById("comAdv14").style.display = "none";
+        document.getElementById("comExp14").style.display = "none";
+    }
+    else if (d >= 2 && d <= 5) {
+        document.getElementById("comInt14").style.display = "none";
+        document.getElementById("comAdv14").style.display = "block";
+        document.getElementById("comExp14").style.display = "none";
+    }
+    else if (d >= 6 && d <= 10) {
+        document.getElementById("comInt14").style.display = "none";
+        document.getElementById("comAdv14").style.display = "none";
+        document.getElementById("comExp14").style.display = "block";
+    }
+    else if (d <= 0) {
+        document.getElementById("comInt13").style.display = "none";
+        document.getElementById("comAdv13").style.display = "none";
+        document.getElementById("comExp13").style.display = "none";
+    }
+}
+function comp15Cal() {
+    var d = document.getElementById("resistivityText").value
+    if (d == 1) {
+        document.getElementById("comInt15").style.display = "block";
+        document.getElementById("comAdv15").style.display = "none";
+        document.getElementById("comExp15").style.display = "none";
+    }
+    else if (d >= 2 && d <= 5) {
+        document.getElementById("comInt15").style.display = "none";
+        document.getElementById("comAdv15").style.display = "block";
+        document.getElementById("comExp15").style.display = "none";
+    }
+    else if (d >= 6 && d <= 10) {
+        document.getElementById("comInt15").style.display = "none";
+        document.getElementById("comAdv15").style.display = "none";
+        document.getElementById("comExp15").style.display = "block";
+    }
+    else if (d <= 0) {
+        document.getElementById("comInt15").style.display = "none";
+        document.getElementById("comAdv15").style.display = "none";
+        document.getElementById("comExp15").style.display = "none";
+    }
+}
+function comp16Cal() {
+    var d = document.getElementById("resolveText").value
+    if (d == 1) {
+        document.getElementById("comInt16").style.display = "block";
+        document.getElementById("comAdv16").style.display = "none";
+        document.getElementById("comExp16").style.display = "none";
+    }
+    else if (d >= 2 && d <= 5) {
+        document.getElementById("comInt16").style.display = "none";
+        document.getElementById("comAdv16").style.display = "block";
+        document.getElementById("comExp15").style.display = "none";
+    }
+    else if (d >= 6 && d <= 10) {
+        document.getElementById("comInt16").style.display = "none";
+        document.getElementById("comAdv16").style.display = "none";
+        document.getElementById("comExp16").style.display = "block";
+    }
+    else if (d <= 0) {
+        document.getElementById("comInt16").style.display = "none";
+        document.getElementById("comAdv16").style.display = "none";
+        document.getElementById("comExp16").style.display = "none";
+    }
+}
+function comp17Cal() {
+    var d = document.getElementById("pipeText").value
+    if (d == 1) {
+        document.getElementById("comInt17").style.display = "block";
+        document.getElementById("comAdv17").style.display = "none";
+        document.getElementById("comExp17").style.display = "none";
+    }
+    else if (d == 2) {
+        document.getElementById("comInt17").style.display = "none";
+        document.getElementById("comAdv17").style.display = "block";
+        document.getElementById("comExp17").style.display = "none";
+    }
+    else if (d >= 3) {
+        document.getElementById("comInt17").style.display = "none";
+        document.getElementById("comAdv17").style.display = "none";
+        document.getElementById("comExp17").style.display = "block";
+    }
+    else if (d <= 0) {
+        document.getElementById("comInt17").style.display = "none";
+        document.getElementById("comAdv17").style.display = "none";
+        document.getElementById("comExp17").style.display = "none";
+    }
+}
+function comp18Cal() {
+    var d = document.getElementById("conveyanceText").value
+    if (d == 1) {
+        document.getElementById("comInt18").style.display = "block";
+        document.getElementById("comAdv18").style.display = "none";
+        document.getElementById("comExp18").style.display = "none";
+    }
+    else if (d >= 2 && d <= 5) {
+        document.getElementById("comInt18").style.display = "none";
+        document.getElementById("comAdv18").style.display = "block";
+        document.getElementById("comExp18").style.display = "none";
+    }
+    else if (d >= 6 && d <= 10) {
+        document.getElementById("comInt18").style.display = "none";
+        document.getElementById("comAdv18").style.display = "none";
+        document.getElementById("comExp18").style.display = "block";
+    }
+    else if (d <= 0) {
+        document.getElementById("comInt18").style.display = "none";
+        document.getElementById("comAdv18").style.display = "none";
+        document.getElementById("comExp18").style.display = "none";
+    }
+}
+
+function calculateGrade() {
     var a = document.forms["core"];
     var b = document.forms["wl"];
     var c = document.forms["com"];
-    var coreCheck =a.querySelectorAll('input[type="checkbox"]:checked');
-    var coreIntCheck =a.querySelectorAll('input[value="Intermediate"]:checked');
-    var coreAdvCheck =a.querySelectorAll('input[value="Advanced"]:checked');
-    var coreExpCheck =a.querySelectorAll('input[value="Expert"]:checked');
-    var wlCheck =b.querySelectorAll('input[type="checkbox"]:checked');
-    var wlIntCheck =b.querySelectorAll('input[value="Intermediate"]:checked');
-    var wlAdvCheck =b.querySelectorAll('input[value="Advanced"]:checked');
-    var wlExpCheck =b.querySelectorAll('input[value="Expert"]:checked');
-    var comCheck =c.querySelectorAll('input[type="checkbox"]:checked');
-    var comIntCheck =c.querySelectorAll('input[value="Intermediate"]:checked');
-    var comAdvCheck =c.querySelectorAll('input[value="Advanced"]:checked');
-    var comExpCheck =c.querySelectorAll('input[value="Expert"]:checked');
+    var coreCheck = a.querySelectorAll('input[type="checkbox"]:checked');
+    var coreIntCheck = a.querySelectorAll('input[value="Intermediate"]:checked');
+    var coreAdvCheck = a.querySelectorAll('input[value="Advanced"]:checked');
+    var coreExpCheck = a.querySelectorAll('input[value="Expert"]:checked');
+    var wlCheck = b.querySelectorAll('input[type="checkbox"]:checked');
+    var wlIntCheck = b.querySelectorAll('input[value="Intermediate"]:checked');
+    var wlAdvCheck = b.querySelectorAll('input[value="Advanced"]:checked');
+    var wlExpCheck = b.querySelectorAll('input[value="Expert"]:checked');
+    var comCheck = c.querySelectorAll('input[type="checkbox"]:checked');
+    var comIntCheck = c.querySelectorAll('input[value="Intermediate"]:checked');
+    var comAdvCheck = c.querySelectorAll('input[value="Advanced"]:checked');
+    var comExpCheck = c.querySelectorAll('input[value="Expert"]:checked');
 
     //G08//
-    var d = coreIntCheck.length +coreAdvCheck.length+coreExpCheck.length;
-    var e= wlIntCheck.length+wlAdvCheck.length+wlExpCheck.length;
-    var f = comIntCheck.length+comAdvCheck.length+comExpCheck.length;
-    
+    var d = coreIntCheck.length + coreAdvCheck.length + coreExpCheck.length;
+    var e = wlIntCheck.length + wlAdvCheck.length + wlExpCheck.length;
+    var f = comIntCheck.length + comAdvCheck.length + comExpCheck.length;
+
     //G09
-    var g = coreAdvCheck.length+coreExpCheck.length;
-    var h = wlAdvCheck.length+wlExpCheck.length;
+    var g = coreAdvCheck.length + coreExpCheck.length;
+    var h = wlAdvCheck.length + wlExpCheck.length;
 
     //G10//
-    var i = wlIntCheck.length+wlAdvCheck.length;
+    var i = wlIntCheck.length + wlAdvCheck.length;
 
-    if(coreExpCheck.length >=3){
-        if(wlExpCheck.length >=2 && f>=11 ||
-            h >=3 && f>=11){
-                document.getElementById("Grade").textContent="G11";   
-            }
-        else if(wlExpCheck.length >=1 && f>=8 && f<=10 ||
-            h >=2 && f>=8 && f<=10) {
-                document.getElementById("Grade").textContent="G10"   
-            }   
+    if (coreExpCheck.length >= 3) {
+        if (wlExpCheck.length >= 2 && f >= 11 ||
+            h >= 3 && f >= 11) {
+            document.getElementById("Grade").textContent = "G11";
+        }
+        else if (wlExpCheck.length >= 1 && f >= 8 && f <= 10 ||
+            h >= 2 && f >= 8 && f <= 10) {
+            document.getElementById("Grade").textContent = "G10"
+        }
     }
 
-    else if(g >=3 && h >=1 && f>=6){
-        document.getElementById("Grade").textContent="G09"  
+    else if (g >= 3 && h >= 1 && f >= 6) {
+        document.getElementById("Grade").textContent = "G09"
     }
 
-    else if(d >=3 && e >=1 && f>=6){
-        document.getElementById("Grade").textContent="G08"  
+    else if (d >= 3 && e >= 1 && f >= 6) {
+        document.getElementById("Grade").textContent = "G08"
     }
 
-    else if (document.getElementById("Grade").textContent=" ")
-    {
-        document.getElementById("errorGrade").textContent="Your Candidate grade is either G08 or G09";
+    else if (document.getElementById("Grade").textContent = " ") {
+        document.getElementById("errorGrade").textContent = "Your Candidate grade is either G08 or G09";
     }
 }
 
 
 
 
-function clearRadioButtonsCom(){
+function clearRadioButtonsCom() {
     var ele = document.querySelectorAll("input[name= com1]");
-     for(var i=0;i<ele.length;i++){
+    for (var i = 0; i < ele.length; i++) {
         ele[i].checked = false;
-     }
-     var ele2 = document.querySelectorAll("input[name= com2]");
-     for(var i=0;i<ele2.length;i++){
+    }
+    var ele2 = document.querySelectorAll("input[name= com2]");
+    for (var i = 0; i < ele2.length; i++) {
         ele2[i].checked = false;
-     }
-     var ele3= document.querySelectorAll("input[name= com3]");
-     for(var i=0;i<ele3.length;i++){
+    }
+    var ele3 = document.querySelectorAll("input[name= com3]");
+    for (var i = 0; i < ele3.length; i++) {
         ele3[i].checked = false;
 
-     }var ele4= document.querySelectorAll("input[name= com4]");
-     for(var i=0;i<ele4.length;i++){
+    } var ele4 = document.querySelectorAll("input[name= com4]");
+    for (var i = 0; i < ele4.length; i++) {
         ele4[i].checked = false;
-     }
-     var ele5 = document.querySelectorAll("input[name= com5]");
-     for(var i=0;i<ele5.length;i++){
+    }
+    var ele5 = document.querySelectorAll("input[name= com5]");
+    for (var i = 0; i < ele5.length; i++) {
         ele5[i].checked = false;
-     }
-     var ele6 = document.querySelectorAll("input[name= com6]");
-     for(var i=0;i<ele6.length;i++){
+    }
+    var ele6 = document.querySelectorAll("input[name= com6]");
+    for (var i = 0; i < ele6.length; i++) {
         ele6[i].checked = false;
-     }
-     var ele7= document.querySelectorAll("input[name= com7]");
-     for(var i=0;i<ele7.length;i++){
+    }
+    var ele7 = document.querySelectorAll("input[name= com7]");
+    for (var i = 0; i < ele7.length; i++) {
         ele7[i].checked = false;
-        
-     }var ele8= document.querySelectorAll("input[name= com8]");
-     for(var i=0;i<ele8.length;i++){
+
+    } var ele8 = document.querySelectorAll("input[name= com8]");
+    for (var i = 0; i < ele8.length; i++) {
         ele8[i].checked = false;
-     }
-     var ele9 = document.querySelectorAll("input[name= com9]");
-     for(var i=0;i<ele9.length;i++){
+    }
+    var ele9 = document.querySelectorAll("input[name= com9]");
+    for (var i = 0; i < ele9.length; i++) {
         ele9[i].checked = false;
-     }
-     var ele10 = document.querySelectorAll("input[name= com10]");
-     for(var i=0;i<ele10.length;i++){
+    }
+    var ele10 = document.querySelectorAll("input[name= com10]");
+    for (var i = 0; i < ele10.length; i++) {
         ele10[i].checked = false;
-     }
-     var ele11= document.querySelectorAll("input[name= com11]");
-     for(var i=0;i<ele11.length;i++){
+    }
+    var ele11 = document.querySelectorAll("input[name= com11]");
+    for (var i = 0; i < ele11.length; i++) {
         ele11[i].checked = false;
 
-     }var ele12= document.querySelectorAll("input[name= com12]");
-     for(var i=0;i<ele12.length;i++){
+    } var ele12 = document.querySelectorAll("input[name= com12]");
+    for (var i = 0; i < ele12.length; i++) {
         ele12[i].checked = false;
-     }
-     var ele13 = document.querySelectorAll("input[name= com13]");
-     for(var i=0;i<ele13.length;i++){
+    }
+    var ele13 = document.querySelectorAll("input[name= com13]");
+    for (var i = 0; i < ele13.length; i++) {
         ele13[i].checked = false;
-     }
-     var ele14 = document.querySelectorAll("input[name= com14]");
-     for(var i=0;i<ele14.length;i++){
+    }
+    var ele14 = document.querySelectorAll("input[name= com14]");
+    for (var i = 0; i < ele14.length; i++) {
         ele14[i].checked = false;
-     }
-     var ele15= document.querySelectorAll("input[name= com15]");
-     for(var i=0;i<ele15.length;i++){
+    }
+    var ele15 = document.querySelectorAll("input[name= com15]");
+    for (var i = 0; i < ele15.length; i++) {
         ele15[i].checked = false;
-        
-     }var ele16= document.querySelectorAll("input[name= com16]");
-     for(var i=0;i<ele16.length;i++){
+
+    } var ele16 = document.querySelectorAll("input[name= com16]");
+    for (var i = 0; i < ele16.length; i++) {
         ele16[i].checked = false;
-     }
-     var ele17= document.querySelectorAll("input[name= com17]");
-     for(var i=0;i<ele17.length;i++){
+    }
+    var ele17 = document.querySelectorAll("input[name= com17]");
+    for (var i = 0; i < ele17.length; i++) {
         ele17[i].checked = false;
-     }
-  }
-  
-  function clearcheckCom(){
+    }
+}
+
+function clearcheckCom() {
     var ele = document.querySelectorAll("input[id= com1]");
-     for(var i=0;i<ele.length;i++){
+    for (var i = 0; i < ele.length; i++) {
         ele[i].checked = false;
-     }
-     var ele2 = document.querySelectorAll("input[id= com2]");
-     for(var i=0;i<ele2.length;i++){
+    }
+    var ele2 = document.querySelectorAll("input[id= com2]");
+    for (var i = 0; i < ele2.length; i++) {
         ele2[i].checked = false;
-     }
-     var ele3= document.querySelectorAll("input[id= com3]");
-     for(var i=0;i<ele3.length;i++){
+    }
+    var ele3 = document.querySelectorAll("input[id= com3]");
+    for (var i = 0; i < ele3.length; i++) {
         ele3[i].checked = false;
 
-     }var ele4= document.querySelectorAll("input[id= com4]");
-     for(var i=0;i<ele4.length;i++){
+    } var ele4 = document.querySelectorAll("input[id= com4]");
+    for (var i = 0; i < ele4.length; i++) {
         ele4[i].checked = false;
-     }
-     var ele5 = document.querySelectorAll("input[id= com5]");
-     for(var i=0;i<ele5.length;i++){
+    }
+    var ele5 = document.querySelectorAll("input[id= com5]");
+    for (var i = 0; i < ele5.length; i++) {
         ele5[i].checked = false;
-     }
-     var ele6 = document.querySelectorAll("input[id= com6]");
-     for(var i=0;i<ele6.length;i++){
+    }
+    var ele6 = document.querySelectorAll("input[id= com6]");
+    for (var i = 0; i < ele6.length; i++) {
         ele6[i].checked = false;
-     }
-     var ele7= document.querySelectorAll("input[id= com7]");
-     for(var i=0;i<ele7.length;i++){
+    }
+    var ele7 = document.querySelectorAll("input[id= com7]");
+    for (var i = 0; i < ele7.length; i++) {
         ele7[i].checked = false;
-        
-     }var ele8= document.querySelectorAll("input[id= com8]");
-     for(var i=0;i<ele8.length;i++){
+
+    } var ele8 = document.querySelectorAll("input[id= com8]");
+    for (var i = 0; i < ele8.length; i++) {
         ele8[i].checked = false;
-     }
-     var ele9 = document.querySelectorAll("input[id= com9]");
-     for(var i=0;i<ele9.length;i++){
+    }
+    var ele9 = document.querySelectorAll("input[id= com9]");
+    for (var i = 0; i < ele9.length; i++) {
         ele9[i].checked = false;
-     }
-     var ele10 = document.querySelectorAll("input[id= com10]");
-     for(var i=0;i<ele10.length;i++){
+    }
+    var ele10 = document.querySelectorAll("input[id= com10]");
+    for (var i = 0; i < ele10.length; i++) {
         ele10[i].checked = false;
-     }
-     var ele11= document.querySelectorAll("input[id= com11]");
-     for(var i=0;i<ele11.length;i++){
+    }
+    var ele11 = document.querySelectorAll("input[id= com11]");
+    for (var i = 0; i < ele11.length; i++) {
         ele11[i].checked = false;
 
-     }var ele12= document.querySelectorAll("input[id= com12]");
-     for(var i=0;i<ele12.length;i++){
+    } var ele12 = document.querySelectorAll("input[id= com12]");
+    for (var i = 0; i < ele12.length; i++) {
         ele12[i].checked = false;
-     }
-     var ele13 = document.querySelectorAll("input[id= com13]");
-     for(var i=0;i<ele13.length;i++){
+    }
+    var ele13 = document.querySelectorAll("input[id= com13]");
+    for (var i = 0; i < ele13.length; i++) {
         ele13[i].checked = false;
-     }
-     var ele14 = document.querySelectorAll("input[id= com14]");
-     for(var i=0;i<ele14.length;i++){
+    }
+    var ele14 = document.querySelectorAll("input[id= com14]");
+    for (var i = 0; i < ele14.length; i++) {
         ele14[i].checked = false;
-     }
-     var ele15= document.querySelectorAll("input[id= com15]");
-     for(var i=0;i<ele15.length;i++){
+    }
+    var ele15 = document.querySelectorAll("input[id= com15]");
+    for (var i = 0; i < ele15.length; i++) {
         ele15[i].checked = false;
-        
-     }var ele16= document.querySelectorAll("input[id= com16]");
-     for(var i=0;i<ele16.length;i++){
+
+    } var ele16 = document.querySelectorAll("input[id= com16]");
+    for (var i = 0; i < ele16.length; i++) {
         ele16[i].checked = false;
-     }
-     var ele17= document.querySelectorAll("input[id= com17]");
-     for(var i=0;i<ele17.length;i++){
+    }
+    var ele17 = document.querySelectorAll("input[id= com17]");
+    for (var i = 0; i < ele17.length; i++) {
         ele17[i].checked = false;
-     }
-  }
+    }
+}
 
-  function clearRadioButtonswl(){
+function clearRadioButtonswl() {
     var ele = document.querySelectorAll("input[name= wl1]");
-     for(var i=0;i<ele.length;i++){
+    for (var i = 0; i < ele.length; i++) {
         ele[i].checked = false;
-     }
-     var ele2 = document.querySelectorAll("input[name= wl2]");
-     for(var i=0;i<ele2.length;i++){
+    }
+    var ele2 = document.querySelectorAll("input[name= wl2]");
+    for (var i = 0; i < ele2.length; i++) {
         ele2[i].checked = false;
-     }
-     var ele3= document.querySelectorAll("input[name= wl3]");
-     for(var i=0;i<ele3.length;i++){
+    }
+    var ele3 = document.querySelectorAll("input[name= wl3]");
+    for (var i = 0; i < ele3.length; i++) {
         ele3[i].checked = false;
 
-     }var ele4= document.querySelectorAll("input[name= wl4]");
-     for(var i=0;i<ele4.length;i++){
+    } var ele4 = document.querySelectorAll("input[name= wl4]");
+    for (var i = 0; i < ele4.length; i++) {
         ele4[i].checked = false;
-     }
-} 
+    }
+}
 
-function clearcheckwl(){
+function clearcheckwl() {
     var ele = document.querySelectorAll("input[id= wl1]");
-     for(var i=0;i<ele.length;i++){
+    for (var i = 0; i < ele.length; i++) {
         ele[i].checked = false;
-     }
-     var ele2 = document.querySelectorAll("input[id= wl2]");
-     for(var i=0;i<ele2.length;i++){
+    }
+    var ele2 = document.querySelectorAll("input[id= wl2]");
+    for (var i = 0; i < ele2.length; i++) {
         ele2[i].checked = false;
-     }
-     var ele3= document.querySelectorAll("input[id= wl3]");
-     for(var i=0;i<ele3.length;i++){
+    }
+    var ele3 = document.querySelectorAll("input[id= wl3]");
+    for (var i = 0; i < ele3.length; i++) {
         ele3[i].checked = false;
 
-     }var ele4= document.querySelectorAll("input[id= wl4]");
-     for(var i=0;i<ele4.length;i++){
+    } var ele4 = document.querySelectorAll("input[id= wl4]");
+    for (var i = 0; i < ele4.length; i++) {
         ele4[i].checked = false;
-     }
-  }
+    }
+}
 
-  function clearRadioButtonscore(){
+function clearRadioButtonscore() {
     var ele = document.querySelectorAll("input[name= core1]");
-     for(var i=0;i<ele.length;i++){
+    for (var i = 0; i < ele.length; i++) {
         ele[i].checked = false;
-     }
-     var ele2 = document.querySelectorAll("input[name= core2]");
-     for(var i=0;i<ele2.length;i++){
+    }
+    var ele2 = document.querySelectorAll("input[name= core2]");
+    for (var i = 0; i < ele2.length; i++) {
         ele2[i].checked = false;
-     }
-     var ele3= document.querySelectorAll("input[name= core3]");
-     for(var i=0;i<ele3.length;i++){
+    }
+    var ele3 = document.querySelectorAll("input[name= core3]");
+    for (var i = 0; i < ele3.length; i++) {
         ele3[i].checked = false;
 
-     }var ele4= document.querySelectorAll("input[name= core4]");
-     for(var i=0;i<ele4.length;i++){
+    } var ele4 = document.querySelectorAll("input[name= core4]");
+    for (var i = 0; i < ele4.length; i++) {
         ele4[i].checked = false;
-     }
-} 
+    }
+}
 
-function clearcheckcore(){
+function clearcheckcore() {
     var ele = document.querySelectorAll("input[id= core1]");
-     for(var i=0;i<ele.length;i++){
+    for (var i = 0; i < ele.length; i++) {
         ele[i].checked = false;
-     }
-     var ele2 = document.querySelectorAll("input[id= core2]");
-     for(var i=0;i<ele2.length;i++){
+    }
+    var ele2 = document.querySelectorAll("input[id= core2]");
+    for (var i = 0; i < ele2.length; i++) {
         ele2[i].checked = false;
-     }
-     var ele3= document.querySelectorAll("input[id= core3]");
-     for(var i=0;i<ele3.length;i++){
+    }
+    var ele3 = document.querySelectorAll("input[id= core3]");
+    for (var i = 0; i < ele3.length; i++) {
         ele3[i].checked = false;
 
-     }var ele4= document.querySelectorAll("input[id= core4]");
-     for(var i=0;i<ele4.length;i++){
+    } var ele4 = document.querySelectorAll("input[id= core4]");
+    for (var i = 0; i < ele4.length; i++) {
         ele4[i].checked = false;
-     }
-  }
+    }
+}
 
-  function exportHTMLtoPDF() {
+function clearCore() {
+    document.getElementById("winchText").value = "";
+    document.getElementById("unitsText").value = "";
+    document.getElementById("rigUpText").value = "";
+    document.getElementById("basicText").value = "";
+    document.getElementById("crInt4").style.display = "none";
+    document.getElementById("crAdv4").style.display = "none";
+    document.getElementById("crExp4").style.display = "none";
+    document.getElementById("crInt3").style.display = "none";
+    document.getElementById("crAdv3").style.display = "none";
+    document.getElementById("crExp3").style.display = "none";
+    document.getElementById("crInt2").style.display = "none";
+    document.getElementById("crAdv2").style.display = "none";
+    document.getElementById("crExp2").style.display = "none";
+    document.getElementById("crInt1").style.display = "none";
+    document.getElementById("crAdv1").style.display = "none";
+    document.getElementById("crExp1").style.display = "none";
+}
+
+function clearWl() {
+    document.getElementById("radiationText").value = "";
+    document.getElementById("ExplosivesText").value = "";
+    document.getElementById("controlText").value = "";
+    document.getElementById("wlInt3").style.display = "none";
+    document.getElementById("wlAdv3").style.display = "none";
+    document.getElementById("wlExp3").style.display = "none";
+    document.getElementById("wlInt2").style.display = "none";
+    document.getElementById("wlAdv2").style.display = "none";
+    document.getElementById("wlExp2").style.display = "none";
+    document.getElementById("wlInt1").style.display = "none";
+    document.getElementById("wlAdv1").style.display = "none";
+    document.getElementById("wlExp1").style.display = "none";
+}
+
+function clearComp() {
+    document.getElementById("acousticsText").value = "";
+    document.getElementById("seismicText").value = "";
+    document.getElementById("controlText").value = "";
+    document.getElementById("cementText").value = "";
+    document.getElementById("coringText").value = "";
+    document.getElementById("corrosionText").value = "";
+    document.getElementById("geologyText").value = "";
+    document.getElementById("magneticText").value = "";
+    document.getElementById("nuclearText").value = "";
+    document.getElementById("pPText").value = "";
+    document.getElementById("perforationText").value = "";
+    document.getElementById("productionText").value = "";
+    document.getElementById("RMText").value = "";
+    document.getElementById("RPText").value = "";
+    document.getElementById("resistivityText").value = "";
+    document.getElementById("resolveText").value = "";
+    document.getElementById("pipeText").value = "";
+    document.getElementById("conveyanceText").value = "";
+    document.getElementById("comInt18").style.display = "none";
+    document.getElementById("comAdv18").style.display = "none";
+    document.getElementById("comExp18").style.display = "none";
+    document.getElementById("comInt17").style.display = "none";
+    document.getElementById("comAdv17").style.display = "none";
+    document.getElementById("comExp17").style.display = "none";
+    document.getElementById("comInt16").style.display = "none";
+    document.getElementById("comAdv16").style.display = "none";
+    document.getElementById("comExp16").style.display = "none";
+    document.getElementById("comInt15").style.display = "none";
+    document.getElementById("comAdv15").style.display = "none";
+    document.getElementById("comExp15").style.display = "none";
+    document.getElementById("comInt14").style.display = "none";
+    document.getElementById("comAdv14").style.display = "none";
+    document.getElementById("comExp14").style.display = "none";
+    document.getElementById("comInt13").style.display = "none";
+    document.getElementById("comAdv13").style.display = "none";
+    document.getElementById("comExp13").style.display = "none";
+    document.getElementById("comInt12").style.display = "none";
+    document.getElementById("comAdv12").style.display = "none";
+    document.getElementById("comExp12").style.display = "none";
+    document.getElementById("comInt11").style.display = "none";
+    document.getElementById("comAdv11").style.display = "none";
+    document.getElementById("comExp11").style.display = "none";
+    document.getElementById("comInt10").style.display = "none";
+    document.getElementById("comAdv10").style.display = "none";
+    document.getElementById("comExp10").style.display = "none";
+    document.getElementById("comInt9").style.display = "none";
+    document.getElementById("comAdv9").style.display = "none";
+    document.getElementById("comExp9").style.display = "none";
+    document.getElementById("comInt8").style.display = "none";
+    document.getElementById("comAdv8").style.display = "none";
+    document.getElementById("comExp8").style.display = "none";
+    document.getElementById("comInt7").style.display = "none";
+    document.getElementById("comAdv7").style.display = "none";
+    document.getElementById("comExp7").style.display = "none";
+    document.getElementById("comInt5").style.display = "none";
+    document.getElementById("comAdv5").style.display = "none";
+    document.getElementById("comExp5").style.display = "none";
+    document.getElementById("comInt4").style.display = "none";
+    document.getElementById("comAdv4").style.display = "none";
+    document.getElementById("comExp4").style.display = "none";
+    document.getElementById("comInt3").style.display = "none";
+    document.getElementById("comAdv3").style.display = "none";
+    document.getElementById("comExp3").style.display = "none";
+    document.getElementById("comInt2").style.display = "none";
+    document.getElementById("comAdv2").style.display = "none";
+    document.getElementById("comExp2").style.display = "none";
+    document.getElementById("comInt1").style.display = "none";
+    document.getElementById("comAdv1").style.display = "none";
+    document.getElementById("comExp1").style.display = "none";
+}
+
+function exportHTMLtoPDF() {
     // let htmlElement = document.getElementById('Elements');
     // let htmlElement2 = document.getElementById('heading');
-    
+
     // html2pdf().from(htmlElement2).save('exported_file.pdf');
     // // html2pdf().from(htmlElement).save('exported_file.pdf');
     // console.log(htmlElement)
@@ -1030,29 +1711,29 @@ function clearcheckcore(){
     var el3 = document.getElementById('Elements');
     var el4 = document.getElementById('result')
 
-  elementToPrint.appendChild(el1.cloneNode(true));
-  elementToPrint.appendChild(el2.cloneNode(true));
-  elementToPrint.appendChild(el3.cloneNode(true));
-  elementToPrint.appendChild(el4.cloneNode(true));
+    elementToPrint.appendChild(el1.cloneNode(true));
+    elementToPrint.appendChild(el2.cloneNode(true));
+    elementToPrint.appendChild(el3.cloneNode(true));
+    elementToPrint.appendChild(el4.cloneNode(true));
 
-// html2pdf(elementToPrint);
-html2pdf().from(elementToPrint).save('exported_file.pdf')
- }
+    // html2pdf(elementToPrint);
+    html2pdf().from(elementToPrint).save('exported_file.pdf')
+}
 
 //  document.getElementById('reportsbutton').addEventListener('click', exportHTMLtoPDF);
 
-//   var doc = new jsPDF(); 
-//   var specialElementHandlers = { 
-//       '#editor': function (element, renderer) { 
-//           return true; 
-//       } 
+//   var doc = new jsPDF();
+//   var specialElementHandlers = {
+//       '#editor': function (element, renderer) {
+//           return true;
+//       }
 //   };
-//   $('#reportsbutton').click(function () { 
-//       doc.fromHTML($('#header').html(), 15, 15, { 
-//           'width': 190, 
-//               'elementHandlers': specialElementHandlers 
-//       }); 
-//       doc.save('sample-page.pdf'); 
+//   $('#reportsbutton').click(function () {
+//       doc.fromHTML($('#header').html(), 15, 15, {
+//           'width': 190,
+//               'elementHandlers': specialElementHandlers
+//       });
+//       doc.save('sample-page.pdf');
 //   });
 
 
@@ -1097,6 +1778,6 @@ html2pdf().from(elementToPrint).save('exported_file.pdf')
 //        console.log("Grade 1")
 //     }
 //     else{
-//         console.log("Grade 2")  
+//         console.log("Grade 2")
 //     }
 // }   
