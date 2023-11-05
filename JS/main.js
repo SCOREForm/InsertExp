@@ -1232,12 +1232,12 @@ function comp15Cal() {
         document.getElementById("comAdv15").style.display = "none";
         document.getElementById("comExp15").style.display = "none";
     }
-    else if (d >= 2 && d <= 5) {
+    else if (d >= 2 && d <= 3) {
         document.getElementById("comInt15").style.display = "none";
         document.getElementById("comAdv15").style.display = "block";
         document.getElementById("comExp15").style.display = "none";
     }
-    else if (d >= 6 && d <= 10) {
+    else if (d >= 4 && d <= 10) {
         document.getElementById("comInt15").style.display = "none";
         document.getElementById("comAdv15").style.display = "none";
         document.getElementById("comExp15").style.display = "block";
