@@ -734,22 +734,22 @@ function handlecCre4(core4) {
 
 function core1Cal() {
     var a = document.getElementById("winchText").value
-    if (a >= 1 && a <= 3) {
+    if (a >= 3 && a <= 4) {
         document.getElementById("crInt1").style.display = "block";
         document.getElementById("crAdv1").style.display = "none";
         document.getElementById("crExp1").style.display = "none";
     }
-    else if (a >= 4 && a <= 5) {
+    else if (a >= 5 && a <= 9) {
         document.getElementById("crInt1").style.display = "none";
         document.getElementById("crAdv1").style.display = "block";
         document.getElementById("crExp1").style.display = "none";
     }
-    else if (a >= 6 && a <= 10) {
+    else if ( a >= 10) {
         document.getElementById("crInt1").style.display = "none";
         document.getElementById("crAdv1").style.display = "none";
         document.getElementById("crExp1").style.display = "block";
     }
-    else if (a <= 0) {
+    else if (a <= 2) {
         document.getElementById("crInt1").style.display = "none";
         document.getElementById("crAdv1").style.display = "none";
         document.getElementById("crExp1").style.display = "none";
@@ -758,17 +758,17 @@ function core1Cal() {
 
 function core2Cal() {
     var b = document.getElementById("unitsText").value
-    if (b == 1) {
+    if (b >= 1 && b <= 4) {
         document.getElementById("crInt2").style.display = "block";
         document.getElementById("crAdv2").style.display = "none";
         document.getElementById("crExp2").style.display = "none";
     }
-    else if (b >= 2 && b <= 5) {
+    else if (b >= 5 && b <= 9) {
         document.getElementById("crInt2").style.display = "none";
         document.getElementById("crAdv2").style.display = "block";
         document.getElementById("crExp2").style.display = "none";
     }
-    else if (b >= 6 && b <= 10) {
+    else if (b >= 10) {
         document.getElementById("crInt2").style.display = "none";
         document.getElementById("crAdv2").style.display = "none";
         document.getElementById("crExp2").style.display = "block";
@@ -781,23 +781,23 @@ function core2Cal() {
 }
 
 function core3Cal() {
-    var c = document.getElementById("rigUpText").value
-    if (c == 1) {
+    var b = document.getElementById("rigUpText").value
+    if (b >= 1 && b <= 4) {
         document.getElementById("crInt3").style.display = "block";
         document.getElementById("crAdv3").style.display = "none";
         document.getElementById("crExp3").style.display = "none";
     }
-    else if (c >= 2 && c <= 5) {
+    else if (b >= 5 && b <= 9) {
         document.getElementById("crInt3").style.display = "none";
         document.getElementById("crAdv3").style.display = "block";
         document.getElementById("crExp3").style.display = "none";
     }
-    else if (c >= 6 && c <= 10) {
+    else if (b >= 10) {
         document.getElementById("crInt3").style.display = "none";
         document.getElementById("crAdv3").style.display = "none";
         document.getElementById("crExp3").style.display = "block";
     }
-    else if (c <= 0) {
+    else if (b <= 0) {
         document.getElementById("crInt3").style.display = "none";
         document.getElementById("crAdv3").style.display = "none";
         document.getElementById("crExp3").style.display = "none";
@@ -805,23 +805,23 @@ function core3Cal() {
 }
 
 function core4Cal() {
-    var d = document.getElementById("basicText").value
-    if (d == 1) {
+    var b = document.getElementById("basicText").value
+    if (b >= 1 && b <= 4) {
         document.getElementById("crInt4").style.display = "block";
         document.getElementById("crAdv4").style.display = "none";
         document.getElementById("crExp4").style.display = "none";
     }
-    else if (d >= 2 && d <= 5) {
+    else if (b >= 5 && b <= 9) {
         document.getElementById("crInt4").style.display = "none";
         document.getElementById("crAdv4").style.display = "block";
         document.getElementById("crExp4").style.display = "none";
     }
-    else if (d >= 6 && d <= 10) {
+    else if (b >= 10) {
         document.getElementById("crInt4").style.display = "none";
         document.getElementById("crAdv4").style.display = "none";
         document.getElementById("crExp4").style.display = "block";
     }
-    else if (d <= 0) {
+    else if (b <= 0) {
         document.getElementById("crInt4").style.display = "none";
         document.getElementById("crAdv4").style.display = "none";
         document.getElementById("crExp4").style.display = "none";
@@ -830,22 +830,22 @@ function core4Cal() {
 
 function wl1Cal() {
     var d = document.getElementById("radiationText").value
-    if (d >= 1 && d <= 3) {
+    if (d >= 3 && d <= 4) {
         document.getElementById("wlInt1").style.display = "block";
         document.getElementById("wlAdv1").style.display = "none";
         document.getElementById("wlExp1").style.display = "none";
     }
-    else if (d >= 4 && d <= 5) {
+    else if (d >= 5 && d <= 9) {
         document.getElementById("wlInt1").style.display = "none";
         document.getElementById("wlAdv1").style.display = "block";
         document.getElementById("wlExp1").style.display = "none";
     }
-    else if (d >= 6 && d <= 10) {
+    else if (d >= 10) {
         document.getElementById("wlInt1").style.display = "none";
         document.getElementById("wlAdv1").style.display = "none";
         document.getElementById("wlExp1").style.display = "block";
     }
-    else if (d <= 0) {
+    else if (d <= 2) {
         document.getElementById("wlInt1").style.display = "none";
         document.getElementById("wlAdv1").style.display = "none";
         document.getElementById("wlExp1").style.display = "none";
@@ -854,22 +854,22 @@ function wl1Cal() {
 
 function wl2Cal() {
     var d = document.getElementById("ExplosivesText").value
-    if (d >= 1 && d <= 3) {
+    if (d >= 3 && d <= 4) {
         document.getElementById("wlInt2").style.display = "block";
         document.getElementById("wlAdv2").style.display = "none";
         document.getElementById("wlExp2").style.display = "none";
     }
-    else if (d >= 4 && d <= 5) {
+    else if (d >= 5 && d <= 9) {
         document.getElementById("wlInt2").style.display = "none";
         document.getElementById("wlAdv2").style.display = "block";
         document.getElementById("wlExp2").style.display = "none";
     }
-    else if (d >= 6 && d <= 10) {
+    else if (d >= 10) {
         document.getElementById("wlInt2").style.display = "none";
         document.getElementById("wlAdv2").style.display = "none";
         document.getElementById("wlExp2").style.display = "block";
     }
-    else if (d <= 0) {
+    else if (d <= 2) {
         document.getElementById("wlInt2").style.display = "none";
         document.getElementById("wlAdv2").style.display = "none";
         document.getElementById("wlExp2").style.display = "none";
@@ -878,22 +878,22 @@ function wl2Cal() {
 
 function wl3Cal() {
     var d = document.getElementById("controlText").value
-    if (d >= 1 && d <= 3) {
+    if (d >= 3 && d <= 4) {
         document.getElementById("wlInt3").style.display = "block";
         document.getElementById("wlAdv3").style.display = "none";
         document.getElementById("wlExp3").style.display = "none";
     }
-    else if (d >= 4 && d <= 5) {
+    else if (d >= 5 && d <= 9) {
         document.getElementById("wlInt3").style.display = "none";
         document.getElementById("wlAdv3").style.display = "block";
         document.getElementById("wlExp3").style.display = "none";
     }
-    else if (d >= 6 && d <= 10) {
+    else if (d >= 10) {
         document.getElementById("wlInt3").style.display = "none";
         document.getElementById("wlAdv3").style.display = "none";
         document.getElementById("wlExp3").style.display = "block";
     }
-    else if (d <= 0) {
+    else if (d <= 2) {
         document.getElementById("wlInt3").style.display = "none";
         document.getElementById("wlAdv3").style.display = "none";
         document.getElementById("wlExp3").style.display = "none";
@@ -902,17 +902,17 @@ function wl3Cal() {
 
 function comp1Cal() {
     var d = document.getElementById("acousticsText").value
-    if (d == 1) {
+    if (d >= 1 && d <= 2) {
         document.getElementById("comInt1").style.display = "block";
         document.getElementById("comAdv1").style.display = "none";
         document.getElementById("comExp1").style.display = "none";
     }
-    else if (d >= 2 && d <= 3) {
+    else if (d >= 3 && d <= 9) {
         document.getElementById("comInt1").style.display = "none";
         document.getElementById("comAdv1").style.display = "block";
         document.getElementById("comExp1").style.display = "none";
     }
-    else if (d >= 4 && d <= 10) {
+    else if (d >= 10) {
         document.getElementById("comInt1").style.display = "none";
         document.getElementById("comAdv1").style.display = "none";
         document.getElementById("comExp1").style.display = "block";
@@ -926,17 +926,17 @@ function comp1Cal() {
 
 function comp2Cal() {
     var d = document.getElementById("seismicText").value
-    if (d == 1) {
+    if (d >= 1 && d <= 4) {
         document.getElementById("comInt2").style.display = "block";
         document.getElementById("comAdv2").style.display = "none";
         document.getElementById("comExp2").style.display = "none";
     }
-    else if (d >= 2 && d <= 5) {
+    else if (d >= 5 && d <= 9) {
         document.getElementById("comInt2").style.display = "none";
         document.getElementById("comAdv2").style.display = "block";
         document.getElementById("comExp2").style.display = "none";
     }
-    else if (d >= 6 && d <= 10) {
+    else if (d >= 10) {
         document.getElementById("comInt2").style.display = "none";
         document.getElementById("comAdv2").style.display = "none";
         document.getElementById("comExp2").style.display = "block";
@@ -949,17 +949,17 @@ function comp2Cal() {
 }
 function comp3Cal() {
     var d = document.getElementById("cementText").value
-    if (d == 1) {
+    if (d >= 1 && d <= 4) {
         document.getElementById("comInt3").style.display = "block";
         document.getElementById("comAdv3").style.display = "none";
         document.getElementById("comExp3").style.display = "none";
     }
-    else if (d >= 2 && d <= 5) {
+    else if (d >= 5 && d <= 9) {
         document.getElementById("comInt3").style.display = "none";
         document.getElementById("comAdv3").style.display = "block";
         document.getElementById("comExp3").style.display = "none";
     }
-    else if (d >= 6 && d <= 10) {
+    else if (d >= 10) {
         document.getElementById("comInt3").style.display = "none";
         document.getElementById("comAdv3").style.display = "none";
         document.getElementById("comExp3").style.display = "block";
@@ -973,17 +973,17 @@ function comp3Cal() {
 
 function comp4Cal() {
     var d = document.getElementById("coringText").value
-    if (d == 1) {
+    if (d >= 1 && d <= 4) {
         document.getElementById("comInt4").style.display = "block";
         document.getElementById("comAdv4").style.display = "none";
         document.getElementById("comExp4").style.display = "none";
     }
-    else if (d >= 2 && d <= 5) {
+    else if (d >= 5 && d <= 9) {
         document.getElementById("comInt4").style.display = "none";
         document.getElementById("comAdv4").style.display = "block";
         document.getElementById("comExp4").style.display = "none";
     }
-    else if (d >= 6 && d <= 10) {
+    else if (d >= 10) {
         document.getElementById("comInt4").style.display = "none";
         document.getElementById("comAdv4").style.display = "none";
         document.getElementById("comExp4").style.display = "block";
@@ -994,66 +994,66 @@ function comp4Cal() {
         document.getElementById("comExp4").style.display = "none";
     }
 }
-function comp4Cal() {
-    var d = document.getElementById("coringText").value
-    if (d == 1) {
-        document.getElementById("comInt4").style.display = "block";
-        document.getElementById("comAdv4").style.display = "none";
-        document.getElementById("comExp4").style.display = "none";
-    }
-    else if (d >= 2 && d <= 5) {
-        document.getElementById("comInt4").style.display = "none";
-        document.getElementById("comAdv4").style.display = "block";
-        document.getElementById("comExp4").style.display = "none";
-    }
-    else if (d >= 6 && d <= 10) {
-        document.getElementById("comInt4").style.display = "none";
-        document.getElementById("comAdv4").style.display = "none";
-        document.getElementById("comExp4").style.display = "block";
-    }
-    else if (d <= 0) {
-        document.getElementById("comInt4").style.display = "none";
-        document.getElementById("comAdv4").style.display = "none";
-        document.getElementById("comExp4").style.display = "none";
-    }
-}
+// function comp4Cal() {
+//     var d = document.getElementById("coringText").value
+//     if (d >= 1 && d <= 4) {
+//         document.getElementById("comInt5").style.display = "block";
+//         document.getElementById("comAdv5").style.display = "none";
+//         document.getElementById("comExp5").style.display = "none";
+//     }
+//     else if (d >= 5 && d <= 9) {
+//         document.getElementById("comInt5").style.display = "none";
+//         document.getElementById("comAdv5").style.display = "block";
+//         document.getElementById("comExp5").style.display = "none";
+//     }
+//     else if (d >= 10) {
+//         document.getElementById("comInt5").style.display = "none";
+//         document.getElementById("comAdv5").style.display = "none";
+//         document.getElementById("comExp5").style.display = "block";
+//     }
+//     else if (d <= 0) {
+//         document.getElementById("comInt5").style.display = "none";
+//         document.getElementById("comAdv5").style.display = "none";
+//         document.getElementById("comExp5").style.display = "none";
+//     }
+// }
 
 function comp5Cal() {
     var d = document.getElementById("corrosionText").value
-    if (d == 1) {
-        document.getElementById("comInt6").style.display = "block";
-        document.getElementById("comAdv6").style.display = "none";
-        document.getElementById("comExp6").style.display = "none";
+    if (d >= 1 && d <= 4) {
+        document.getElementById("comInt5").style.display = "block";
+        document.getElementById("comAdv5").style.display = "none";
+        document.getElementById("comExp5").style.display = "none";
     }
-    else if (d >= 2 && d <= 5) {
-        document.getElementById("comInt6").style.display = "none";
-        document.getElementById("comAdv6").style.display = "block";
-        document.getElementById("comExp6").style.display = "none";
+    else if (d >= 5 && d <= 9) {
+        document.getElementById("comInt5").style.display = "none";
+        document.getElementById("comAdv5").style.display = "block";
+        document.getElementById("comExp5").style.display = "none";
     }
-    else if (d >= 6 && d <= 10) {
-        document.getElementById("comInt6").style.display = "none";
-        document.getElementById("comAdv6").style.display = "none";
-        document.getElementById("comExp6").style.display = "block";
+    else if (d >= 10) {
+        document.getElementById("comInt5").style.display = "none";
+        document.getElementById("comAdv5").style.display = "none";
+        document.getElementById("comExp5").style.display = "block";
     }
     else if (d <= 0) {
-        document.getElementById("comInt6").style.display = "none";
-        document.getElementById("comAdv6").style.display = "none";
-        document.getElementById("comExp6").style.display = "none";
+        document.getElementById("comInt5").style.display = "none";
+        document.getElementById("comAdv5").style.display = "none";
+        document.getElementById("comExp5").style.display = "none";
     }
 }
 function comp7Cal() {
     var d = document.getElementById("geologyText").value
-    if (d == 1) {
+    if (d >= 1 && d <= 4) {
         document.getElementById("comInt7").style.display = "block";
         document.getElementById("comAdv7").style.display = "none";
         document.getElementById("comExp7").style.display = "none";
     }
-    else if (d >= 2 && d <= 5) {
+    else if (d >= 5 && d <= 9) {
         document.getElementById("comInt7").style.display = "none";
         document.getElementById("comAdv7").style.display = "block";
         document.getElementById("comExp7").style.display = "none";
     }
-    else if (d >= 6 && d <= 10) {
+    else if (d >= 10) {
         document.getElementById("comInt7").style.display = "none";
         document.getElementById("comAdv7").style.display = "none";
         document.getElementById("comExp7").style.display = "block";
@@ -1066,17 +1066,17 @@ function comp7Cal() {
 }
 function comp8Cal() {
     var d = document.getElementById("magneticText").value
-    if (d == 1) {
+    if (d >= 1 && d <= 4) {
         document.getElementById("comInt8").style.display = "block";
         document.getElementById("comAdv8").style.display = "none";
         document.getElementById("comExp8").style.display = "none";
     }
-    else if (d >= 2 && d <= 5) {
+    else if (d >= 5 && d <= 9) {
         document.getElementById("comInt8").style.display = "none";
         document.getElementById("comAdv8").style.display = "block";
         document.getElementById("comExp8").style.display = "none";
     }
-    else if (d >= 6 && d <= 10) {
+    else if (d >= 10) {
         document.getElementById("comInt8").style.display = "none";
         document.getElementById("comAdv8").style.display = "none";
         document.getElementById("comExp8").style.display = "block";
@@ -1089,17 +1089,17 @@ function comp8Cal() {
 }
 function comp9Cal() {
     var d = document.getElementById("nuclearText").value
-    if (d == 1) {
+    if (d >= 1 && d <= 2) {
         document.getElementById("comInt9").style.display = "block";
         document.getElementById("comAdv9").style.display = "none";
         document.getElementById("comExp9").style.display = "none";
     }
-    else if (d >= 2 && d <= 3) {
+    else if (d >= 3 && d <= 9) {
         document.getElementById("comInt9").style.display = "none";
         document.getElementById("comAdv9").style.display = "block";
         document.getElementById("comExp9").style.display = "none";
     }
-    else if (d >= 4 && d <= 10) {
+    else if (d >= 10) {
         document.getElementById("comInt9").style.display = "none";
         document.getElementById("comAdv9").style.display = "none";
         document.getElementById("comExp9").style.display = "block";
@@ -1112,17 +1112,17 @@ function comp9Cal() {
 }
 function comp10Cal() {
     var d = document.getElementById("pPText").value
-    if (d == 1) {
+    if (d >= 1 && d <= 4) {
         document.getElementById("comInt10").style.display = "block";
         document.getElementById("comAdv10").style.display = "none";
         document.getElementById("comExp10").style.display = "none";
     }
-    else if (d >= 2 && d <= 5) {
+    else if (d >= 5 && d <= 9) {
         document.getElementById("comInt10").style.display = "none";
         document.getElementById("comAdv10").style.display = "block";
         document.getElementById("comExp10").style.display = "none";
     }
-    else if (d >= 6 && d <= 10) {
+    else if (d >= 10) {
         document.getElementById("comInt10").style.display = "none";
         document.getElementById("comAdv10").style.display = "none";
         document.getElementById("comExp10").style.display = "block";
@@ -1135,17 +1135,17 @@ function comp10Cal() {
 }
 function comp11Cal() {
     var d = document.getElementById("Perforation").value
-    if (d == 1) {
+    if (d >= 1 && d <= 4) {
         document.getElementById("comInt11").style.display = "block";
         document.getElementById("comAdv11").style.display = "none";
         document.getElementById("comExp11").style.display = "none";
     }
-    else if (d >= 2 && d <= 5) {
+    else if (d >= 5 && d <= 9) {
         document.getElementById("comInt11").style.display = "none";
         document.getElementById("comAdv11").style.display = "block";
         document.getElementById("comExp11").style.display = "none";
     }
-    else if (d >= 6 && d <= 10) {
+    else if (d >= 10) {
         document.getElementById("comInt11").style.display = "none";
         document.getElementById("comAdv11").style.display = "none";
         document.getElementById("comExp11").style.display = "block";
@@ -1158,17 +1158,17 @@ function comp11Cal() {
 }
 function comp12Cal() {
     var d = document.getElementById("productionText").value
-    if (d == 1) {
+    if (d >= 1 && d <= 4) {
         document.getElementById("comInt12").style.display = "block";
         document.getElementById("comAdv12").style.display = "none";
         document.getElementById("comExp12").style.display = "none";
     }
-    else if (d >= 2 && d <= 5) {
+    else if (d >= 5 && d <= 9) {
         document.getElementById("comInt12").style.display = "none";
         document.getElementById("comAdv12").style.display = "block";
         document.getElementById("comExp12").style.display = "none";
     }
-    else if (d >= 6 && d <= 10) {
+    else if (d >= 10) {
         document.getElementById("comInt12").style.display = "none";
         document.getElementById("comAdv12").style.display = "none";
         document.getElementById("comExp12").style.display = "block";
@@ -1181,17 +1181,17 @@ function comp12Cal() {
 }
 function comp13Cal() {
     var d = document.getElementById("RMText").value
-    if (d == 1) {
+    if (d >= 1 && d <= 4) {
         document.getElementById("comInt13").style.display = "block";
         document.getElementById("comAdv13").style.display = "none";
         document.getElementById("comExp13").style.display = "none";
     }
-    else if (d >= 2 && d <= 5) {
+    else if (d >= 5 && d <= 9) {
         document.getElementById("comInt13").style.display = "none";
         document.getElementById("comAdv13").style.display = "block";
         document.getElementById("comExp13").style.display = "none";
     }
-    else if (d >= 6 && d <= 10) {
+    else if (d >= 10) {
         document.getElementById("comInt13").style.display = "none";
         document.getElementById("comAdv13").style.display = "none";
         document.getElementById("comExp13").style.display = "block";
@@ -1204,40 +1204,40 @@ function comp13Cal() {
 }
 function comp14Cal() {
     var d = document.getElementById("RPText").value
-    if (d == 1) {
+    if (d >= 1 && d <= 4) {
         document.getElementById("comInt14").style.display = "block";
         document.getElementById("comAdv14").style.display = "none";
         document.getElementById("comExp14").style.display = "none";
     }
-    else if (d >= 2 && d <= 5) {
+    else if (d >= 5 && d <= 9) {
         document.getElementById("comInt14").style.display = "none";
         document.getElementById("comAdv14").style.display = "block";
         document.getElementById("comExp14").style.display = "none";
     }
-    else if (d >= 6 && d <= 10) {
+    else if (d >= 10) {
         document.getElementById("comInt14").style.display = "none";
         document.getElementById("comAdv14").style.display = "none";
         document.getElementById("comExp14").style.display = "block";
     }
     else if (d <= 0) {
-        document.getElementById("comInt13").style.display = "none";
-        document.getElementById("comAdv13").style.display = "none";
-        document.getElementById("comExp13").style.display = "none";
+        document.getElementById("comInt14").style.display = "none";
+        document.getElementById("comAdv14").style.display = "none";
+        document.getElementById("comExp14").style.display = "none";
     }
 }
 function comp15Cal() {
     var d = document.getElementById("resistivityText").value
-    if (d == 1) {
+    if (d >= 1 && d <= 2) {
         document.getElementById("comInt15").style.display = "block";
         document.getElementById("comAdv15").style.display = "none";
         document.getElementById("comExp15").style.display = "none";
     }
-    else if (d >= 2 && d <= 5) {
+    else if (d >= 3 && d <= 9) {
         document.getElementById("comInt15").style.display = "none";
         document.getElementById("comAdv15").style.display = "block";
         document.getElementById("comExp15").style.display = "none";
     }
-    else if (d >= 6 && d <= 10) {
+    else if (d >= 10) {
         document.getElementById("comInt15").style.display = "none";
         document.getElementById("comAdv15").style.display = "none";
         document.getElementById("comExp15").style.display = "block";
@@ -1250,17 +1250,17 @@ function comp15Cal() {
 }
 function comp16Cal() {
     var d = document.getElementById("resolveText").value
-    if (d == 1) {
+    if (d >= 1 && d <= 4) {
         document.getElementById("comInt16").style.display = "block";
         document.getElementById("comAdv16").style.display = "none";
         document.getElementById("comExp16").style.display = "none";
     }
-    else if (d >= 2 && d <= 5) {
+    else if (d >= 5 && d <= 9) {
         document.getElementById("comInt16").style.display = "none";
         document.getElementById("comAdv16").style.display = "block";
-        document.getElementById("comExp15").style.display = "none";
+        document.getElementById("comExp16").style.display = "none";
     }
-    else if (d >= 6 && d <= 10) {
+    else if (d >= 10) {
         document.getElementById("comInt16").style.display = "none";
         document.getElementById("comAdv16").style.display = "none";
         document.getElementById("comExp16").style.display = "block";
@@ -1296,17 +1296,17 @@ function comp17Cal() {
 }
 function comp18Cal() {
     var d = document.getElementById("conveyanceText").value
-    if (d == 1) {
+    if (d >= 1 && d <= 4) {
         document.getElementById("comInt18").style.display = "block";
         document.getElementById("comAdv18").style.display = "none";
         document.getElementById("comExp18").style.display = "none";
     }
-    else if (d >= 2 && d <= 5) {
+    else if (d >= 5 && d <= 9) {
         document.getElementById("comInt18").style.display = "none";
         document.getElementById("comAdv18").style.display = "block";
         document.getElementById("comExp18").style.display = "none";
     }
-    else if (d >= 6 && d <= 10) {
+    else if (d >= 10) {
         document.getElementById("comInt18").style.display = "none";
         document.getElementById("comAdv18").style.display = "none";
         document.getElementById("comExp18").style.display = "block";
