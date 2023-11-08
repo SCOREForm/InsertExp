@@ -1134,7 +1134,7 @@ function comp10Cal() {
     }
 }
 function comp11Cal() {
-    var d = document.getElementById("Perforation").value
+    var d = document.getElementById("perforationText").value
     if (d >= 1 && d <= 4) {
         document.getElementById("comInt11").style.display = "block";
         document.getElementById("comAdv11").style.display = "none";
